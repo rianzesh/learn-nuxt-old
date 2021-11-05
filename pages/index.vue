@@ -3,11 +3,11 @@
     <div class="x-parallax-img fixed z-0">
       <img class="h-full" src="~/assets/images/parallax2.jpg" />
     </div>
-    <div class="md:px-16 grid grid-cols-2 h-screen bg-blue-400 relative z-1">
-      <div class="bg-yellow-300 p-3 place-self-center">
-        <img class="h-96" src="~/assets/images/osamu.png" />
+    <div class="md:px-16 grid grid-cols-2 h-screen bg-black relative z-1">
+      <div class="bg-yellow-300 place-self-center">
+        <img class="rounded-full h-96" src="~/assets/images/ME.jpg" />
       </div>
-      <div class="bg-green-500 justify-self-start place-self-center">
+      <div class="text-white bg-green-0 justify-self-start place-self-center">
         <h1 class="text-2xl font-poppinsBold">Hello, I'm</h1>
         <h1 class="text-6xl font-poppinsBold">Rahmat Riansyah</h1>
         <p class="mt-5 text-2xl">
@@ -16,7 +16,7 @@
         </p>
       </div>
     </div>
-    <div class="grid grid-cols-2 h-96 bg-pink-200 relative z-1"></div>
+    <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
     <div class="md:px-10 grid grid-cols-2 h-96 relative z-1">
       <div class="bg-yellow-300 p-3 place-self-center">
         <h1 class="text-2xl font-poppinsBold">Let's, Talking</h1>
@@ -24,22 +24,214 @@
         <p class="mt-3 text-2xl">Tak Kenal, Maka Kenalan</p>
       </div>
       <div class="bg-transparent justify-self-start place-self-center">
-        <h1 class="text-2xl font-poppinsBold">Yoo!</h1>
-        <p class="bg-white">
+        <h1 class="text-2xl bg-yellow-300 inline-block font-poppinsBold">
+          Yoo!
+        </h1>
+        <p class="bg-white inline-block">
           Currently, i’m Informatics student at Mercu Buana University who like
           challenges and learn something new, that’s why i’m interested in
           programming field especially Mobile Development. I have others hobby
           such as Design, Photography, Play Badminton and also Draw Cartoon
           Character.
-          <br />
-          <br />
-          That you know?! i have a special skill is <b>LeftHanded</b>, yap i
+        </p>
+        <p class="mt-2 bg-white inline-block">
+          Did you know?! i have a special skill is <b>LeftHanded</b>, yap i
           always do everthing with my left hand and feet like use racket, use
           pencil, kick ball etc. Except to eat, i must use my right hand.
         </p>
       </div>
     </div>
-    <div class="grid grid-cols-2 h-96 bg-pink-200 relative z-1"></div>
+    <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
+    <div class="bg-black mx-auto relative z-1 h-screen">
+      <div
+        class="container flex flex-row mx-auto pl-8 grid gap-y-8 grid-cols-4"
+      >
+        <!-- Card -->
+        <div
+          class="
+            shadow-md
+            rounded-md
+            overflow-hidden
+            justify-self-start
+            place-self-center
+          "
+          style="width: 350px"
+        >
+          <img class="h-full" src="~/assets/images/parallax2.jpg" />
+          <div class="py-6 grid grid-cols-3 bg-gray-800 text-white">
+            <div class="col-span-2 place-self-center">
+              <p class="text-sm">UI/UX Design</p>
+              <h5 class="text-xl font-semibold">JUARA 1 NASIONAL</h5>
+            </div>
+            <div class="place-self-center">
+              <h5 class="text-2xl text-yellow-300 font-semibold">SEE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <!-- Card -->
+        <div
+          class="
+            shadow-md
+            rounded-md
+            overflow-hidden
+            justify-self-start
+            place-self-center
+          "
+          style="width: 350px"
+        >
+          <img class="h-full" src="~/assets/images/parallax2.jpg" />
+          <div class="py-6 grid grid-cols-3 bg-gray-800 text-white">
+            <div class="col-span-2 place-self-center">
+              <p class="text-sm">UI/UX Design</p>
+              <h5 class="text-xl font-semibold">JUARA 1 NASIONAL</h5>
+            </div>
+            <div class="place-self-center">
+              <h5 class="text-2xl text-yellow-300 font-semibold">SEE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <!-- Card -->
+        <div
+          class="
+            shadow-md
+            rounded-md
+            overflow-hidden
+            justify-self-start
+            place-self-center
+          "
+          style="width: 350px"
+        >
+          <img class="h-full" src="~/assets/images/parallax2.jpg" />
+          <div class="py-6 grid grid-cols-3 bg-gray-800 text-white">
+            <div class="col-span-2 place-self-center">
+              <p class="text-sm">UI/UX Design</p>
+              <h5 class="text-xl font-semibold">JUARA 1 NASIONAL</h5>
+            </div>
+            <div class="place-self-center">
+              <h5 class="text-2xl text-yellow-300 font-semibold">SEE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <!-- Card -->
+        <div
+          class="
+            shadow-md
+            rounded-md
+            overflow-hidden
+            justify-self-start
+            place-self-center
+          "
+          style="width: 350px"
+        >
+          <img class="h-full" src="~/assets/images/parallax2.jpg" />
+          <div class="py-6 grid grid-cols-3 bg-gray-800 text-white">
+            <div class="col-span-2 place-self-center">
+              <p class="text-sm">UI/UX Design</p>
+              <h5 class="text-xl font-semibold">JUARA 1 NASIONAL</h5>
+            </div>
+            <div class="place-self-center">
+              <h5 class="text-2xl text-yellow-300 font-semibold">SEE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <!-- Card -->
+        <div
+          class="
+            shadow-md
+            rounded-md
+            overflow-hidden
+            justify-self-start
+            place-self-center
+          "
+          style="width: 350px"
+        >
+          <img class="h-full" src="~/assets/images/parallax2.jpg" />
+          <div class="py-6 grid grid-cols-3 bg-gray-800 text-white">
+            <div class="col-span-2 place-self-center">
+              <p class="text-sm">UI/UX Design</p>
+              <h5 class="text-xl font-semibold">JUARA 1 NASIONAL</h5>
+            </div>
+            <div class="place-self-center">
+              <h5 class="text-2xl text-yellow-300 font-semibold">SEE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <!-- Card -->
+        <div
+          class="
+            shadow-md
+            rounded-md
+            overflow-hidden
+            justify-self-start
+            place-self-center
+          "
+          style="width: 350px"
+        >
+          <img class="h-full" src="~/assets/images/parallax2.jpg" />
+          <div class="py-6 grid grid-cols-3 bg-gray-800 text-white">
+            <div class="col-span-2 place-self-center">
+              <p class="text-sm">UI/UX Design</p>
+              <h5 class="text-xl font-semibold">JUARA 1 NASIONAL</h5>
+            </div>
+            <div class="place-self-center">
+              <h5 class="text-2xl text-yellow-300 font-semibold">SEE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <!-- Card -->
+        <div
+          class="
+            shadow-md
+            rounded-md
+            overflow-hidden
+            justify-self-start
+            place-self-center
+          "
+          style="width: 350px"
+        >
+          <img class="h-full" src="~/assets/images/parallax2.jpg" />
+          <div class="py-6 grid grid-cols-3 bg-gray-800 text-white">
+            <div class="col-span-2 place-self-center">
+              <p class="text-sm">UI/UX Design</p>
+              <h5 class="text-xl font-semibold">JUARA 1 NASIONAL</h5>
+            </div>
+            <div class="place-self-center">
+              <h5 class="text-2xl text-yellow-300 font-semibold">SEE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+        <!-- Card -->
+        <div
+          class="
+            shadow-md
+            rounded-md
+            overflow-hidden
+            justify-self-start
+            place-self-center
+          "
+          style="width: 350px"
+        >
+          <img class="h-full" src="~/assets/images/parallax2.jpg" />
+          <div class="py-6 grid grid-cols-3 bg-gray-800 text-white">
+            <div class="col-span-2 place-self-center">
+              <p class="text-sm">UI/UX Design</p>
+              <h5 class="text-xl font-semibold">JUARA 1 NASIONAL</h5>
+            </div>
+            <div class="place-self-center">
+              <h5 class="text-2xl text-yellow-300 font-semibold">SEE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card -->
+      </div>
+    </div>
     <div class="grid grid-cols-2 h-screen bg-blue-400 relative z-1">
       <div class="bg-yellow-300 p-3 place-self-center">
         <img class="h-96" src="~/assets/images/osamu.png" />
