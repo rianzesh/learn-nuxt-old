@@ -9,3 +9,23 @@
   src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap")
     format("ttf");
 }
+
+@font-face {
+  font-family: "Steelfish Eb";
+  font-display: swap;
+  src: url("~assets/fonts/steelfish/steelfisheb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Monument Extended Ultrabold";
+  font-display: swap;
+  src: url("~assets/fonts/monumentExtended/MonumentExtended-Ultrabold.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Monument Extended Reguler";
+  font-display: swap;
+  src: url("~assets/fonts/monumentExtended/MonumentExtended-Regular.otf")
+    format("opentype");
+}
