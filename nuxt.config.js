@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '-Night Fury',
+    title: 'Night Fury!',
     htmlAttrs: {
       lang: 'en'
     },
