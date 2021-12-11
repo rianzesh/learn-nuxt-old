@@ -1,8 +1,18 @@
 <template>
   <div class="bg-red-300">
-    <div class="x-parallax-img fixed z-0">
-      <img class="h-screen md:h-full" src="~/assets/images/parallax2.jpg" />
-    </div>
+    <hide-at breakpoint="small">
+      <div class="x-parallax-img fixed z-0 overflow-hidden">
+        <img class="h-screen md:h-full" src="~/assets/images/parallax2.jpg" />
+      </div>
+    </hide-at>
+    <show-at breakpoint="small">
+      <div class="x-parallax-img fixed z-0 overflow-hidden">
+        <img
+          class="h-screen md:h-full"
+          src="~/assets/images/parallax2-mobile.jpg"
+        />
+      </div>
+    </show-at>
 
     <section>
       <div
@@ -102,8 +112,8 @@
             "
           >
             Did you know?! i have a special skill is <b>LeftHanded</b>, yap i
-            always do everthing with my left hand and feet like use racket, use
-            pencil, kick ball etc. Except to eat, i must use my right hand.
+            always do everything with my left hand and feet like use racket,
+            write, kick the ball etc. Except to eat, i must use my right hand.
           </p>
         </div>
       </div>
@@ -261,9 +271,9 @@
       <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
       <div
         class="
-          md:px-10
-          grid grid-cols-2
+          md:px-10 md:grid md:grid-cols-2
           h-screen
+          py-40
           bg-gradient-to-l
           from-black
           via-black
@@ -271,9 +281,39 @@
           z-1
         "
       >
-        <div class="bg-transparent justify-self-start place-self-center">
-          <div class="grid grid-cols-3 space-x-3">
-            <div class="flex flex-col col-span-2 space-y-3">
+        <show-at breakpoint="small">
+          <div
+            class="
+              mx-5
+              md:mx-0 md:p-3
+              text-center
+              place-self-center
+              mb-20
+              md:mb-28
+            "
+          >
+            <h1 class="text-white text-xl md:text-2xl font-poppinsBold">
+              Time to Flex my
+            </h1>
+            <div class="bg-x-secondary">
+              <h1 class="text-4xl md:text-6xl font-monumentExtendedBold">
+                Champion
+              </h1>
+              <p class="md:mt-3 text-xl">Berani Unjuk Gigi!</p>
+            </div>
+          </div>
+        </show-at>
+        <div
+          class="
+            bg-transparent
+            justify-self-start
+            place-self-center
+            mx-5
+            md:mx-0
+          "
+        >
+          <div class="grid grid-cols-5 md:grid-cols-3 space-x-3">
+            <div class="flex flex-col col-span-3 md:col-span-2 space-y-3">
               <div
                 class="
                   border-2
@@ -291,10 +331,14 @@
                   <h1
                     class="
                       justify-self-start
-                      text-5xl
-                      ml-10
-                      mt-10
-                      col-span-2
+                      text-2xl
+                      md:text-5xl
+                      ml-5
+                      md:ml-10
+                      mt-5
+                      md:mt-10
+                      col-span-1
+                      md:col-span-2
                       text-x-secondary-opt1
                       font-monumentExtendedBold
                       group-hover:text-black
@@ -305,9 +349,14 @@
                   <p
                     class="
                       justify-self-end
-                      mr-10
-                      my-10
-                      col-span-2
+                      mr-6
+                      md:mr-10
+                      my-7
+                      md:my-10
+                      col-span-3
+                      md:col-span-2
+                      text-xs
+                      md:text-base
                       text-x-secondary-opt1
                       group-hover:text-black
                     "
@@ -316,10 +365,14 @@
                   </p>
                   <h3
                     class="
-                      text-xl
-                      ml-10
-                      my-10
-                      col-span-3
+                      ml-5
+                      mr-5
+                      my-5
+                      md:mr-0 md:my-10 md:ml-10
+                      text-sm
+                      md:text-xl
+                      col-span-4
+                      md:col-span-3
                       text-x-secondary-opt1
                       font-poppinsBold
                       group-hover:text-black
@@ -327,12 +380,14 @@
                   >
                     CSIC Competition at UMN
                   </h3>
-                  <img
-                    class="mr-10 mt-10"
-                    v-show="upHere"
-                    src="~/assets/icons/arrow-right.svg"
-                    alt="arrow-right"
-                  />
+                  <hide-at breakpoint="small">
+                    <img
+                      class="mr-10 mt-10"
+                      v-show="upHere"
+                      src="~/assets/icons/arrow-right.svg"
+                      alt="arrow-right"
+                    />
+                  </hide-at>
                 </div>
               </div>
               <div
@@ -350,39 +405,54 @@
                   <h1
                     class="
                       justify-self-start
-                      text-5xl
-                      m-10
-                      col-span-2
+                      text-2xl
+                      md:text-5xl
+                      ml-5
+                      md:ml-10
+                      mt-5
+                      md:mt-10
+                      col-span-1
+                      md:col-span-2
                       text-x-secondary-opt1
                       font-monumentExtendedBold
                       group-hover:text-black
                     "
                   >
-                    03
+                    01
                   </h1>
                   <p
                     class="
                       justify-self-end
-                      m-10
-                      col-span-2
+                      mr-6
+                      md:mr-10
+                      my-7
+                      md:my-10
+                      col-span-3
+                      md:col-span-2
+                      text-xs
+                      md:text-base
                       text-x-secondary-opt1
                       group-hover:text-black
                     "
                   >
-                    November 21. 2019
+                    Februari 04. 2020
                   </p>
                   <h3
                     class="
-                      justify-self-start
-                      text-xl
-                      m-10
-                      col-span-3
+                      ml-5
+                      mr-5
+                      my-5
+                      md:mr-0 md:my-10 md:ml-10
+                      text-sm
+                      md:text-xl
+                      col-span-4
+                      md:col-span-3
                       text-x-secondary-opt1
                       font-poppinsBold
                       group-hover:text-black
                     "
                   >
-                    CSIC Competition at UMN
+                    Telkom Poster
                   </h3>
                 </div>
               </div>
@@ -390,6 +460,8 @@
             <div
               class="
                 border-2
+                col-span-2
+                md:col-span-1
                 rounded-sm
                 border-x-secondary-opt1
                 backdrop-filter backdrop-blur-sm
@@ -401,32 +473,47 @@
               <div class="grid">
                 <h1
                   class="
-                    text-5xl text-x-secondary-opt1
-                    m-10
+                    justify-self-start
+                    text-2xl
+                    md:text-5xl
+                    m-5
+                    md:m-10
+                    text-x-secondary-opt1
                     font-monumentExtendedBold
                     group-hover:text-black
                   "
                 >
-                  03
+                  02
                 </h1>
+
                 <p
                   class="
                     text-x-secondary-opt1
-                    m-10
                     group-hover:text-black
                     justify-self-end
+                    mr-5
+                    md:mr-10
+                    my-10
+                    md:m-8
+                    text-xs
+                    md:text-base
                   "
                 >
-                  November 21. 2019
+                  Juni 26. 2021
                 </p>
                 <h3
                   class="
-                    text-xl text-x-secondary-opt1
+                    text-x-secondary-opt1
+                    ml-5
+                    my-5
+                    md:my-10 md:ml-10
                     font-poppinsBold
-                    inset-x-0
-                    m-10
                     bottom-0
                     group-hover:text-black
+                    text-sm
+                    md:text-xl
+                    inset-x-0
+                    md:m-10 md:text-xl
                   "
                 >
                   CSIC Competition at UMN
@@ -435,13 +522,17 @@
             </div>
           </div>
         </div>
-        <div class="p-3 place-self-center">
-          <h1 class="text-white text-2xl font-poppinsBold">Time to Flex my</h1>
-          <div class="bg-x-secondary">
-            <h1 class="text-6xl font-monumentExtendedBold">Champion</h1>
-            <p class="mt-3 text-xl">Berani Unjuk Gigi!</p>
+        <hide-at breakpoint="small">
+          <div class="p-3 place-self-center">
+            <h1 class="text-white text-2xl font-poppinsBold">
+              Time to Flex my
+            </h1>
+            <div class="bg-x-secondary">
+              <h1 class="text-6xl font-monumentExtendedBold">Champion</h1>
+              <p class="mt-3 text-xl">Berani Unjuk Gigi!</p>
+            </div>
           </div>
-        </div>
+        </hide-at>
       </div>
       <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
     </section>
@@ -449,7 +540,9 @@
 </template>
 
 <script>
+import { showAt, hideAt } from "vue-breakpoints";
 export default {
+  components: { hideAt, showAt },
   data: function () {
     return {
       upHere: false,
