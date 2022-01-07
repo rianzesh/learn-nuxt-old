@@ -14,6 +14,7 @@
       </div>
     </show-at>
 
+    <!-- header section -->
     <section>
       <div
         class="md:px-16 md:grid md:grid-cols-2 h-screen bg-black relative z-1"
@@ -47,7 +48,9 @@
         </div>
       </div>
     </section>
+    <!-- end of header section -->
 
+    <!-- about me section -->
     <section>
       <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
       <div
@@ -121,7 +124,9 @@
         class="grid grid-cols-2 h-96 bg-black relative z-1 justify-items-center"
       ></div>
     </section>
+    <!-- end of about me section -->
 
+    <!--  portofolio section -->
     <section>
       <div class="bg-black md:py-40 grid mx-auto relative z-1">
         <div
@@ -266,7 +271,9 @@
         </div>
       </div>
     </section>
+    <!-- end of portofolio section -->
 
+    <!-- champion section -->
     <section>
       <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
       <div
@@ -536,6 +543,396 @@
       </div>
       <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
     </section>
+    <!-- end of champion section -->
+
+    <!--  skill section -->
+    <section>
+      <div class="bg-black md:py-40 grid mx-auto relative z-1">
+        <div
+          class="
+            mx-5
+            md:mx-0 md:p-3
+            text-center
+            place-self-center
+            mb-20
+            md:mb-28
+          "
+        >
+          <h1 class="text-white text-xl md:text-2xl font-poppinsBold">
+            Break Down my
+          </h1>
+          <div class="bg-x-secondary">
+            <h1 class="text-4xl md:text-6xl font-monumentExtendedBold">
+              Skills
+            </h1>
+            <p class="md:mt-3 text-xl">Buka Kartu AS niih</p>
+          </div>
+        </div>
+        <div class="container mx-auto">
+          <div
+            class="
+              border-2
+              m-2
+              md:m-3
+              rounded-sm
+              border-white
+              bg-opacity-0
+              inline-block
+              group
+              hover:bg-white
+            "
+          >
+            <div class="">
+              <h1
+                class="
+                  text-lg
+                  md:text-5xl
+                  mx-5
+                  md:mx-10
+                  mt-5
+                  md:mt-10
+                  text-center text-white
+                  font-monumentExtendedBold
+                  group-hover:text-black
+                "
+              >
+                NUXT JS
+              </h1>
+              <p
+                class="
+                  text-center
+                  mt-5
+                  mb-3
+                  md:mt-10
+                  text-xs
+                  md:text-lg
+                  self-end
+                  group-hover:text-black
+                "
+              >
+                BEGINNER
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              border-2
+              m-2
+              md:m-3
+              rounded-sm
+              border-white
+              bg-opacity-0
+              inline-block
+              group
+              hover:bg-white
+            "
+          >
+            <div class="">
+              <h1
+                class="
+                  text-lg
+                  md:text-5xl
+                  mx-5
+                  md:mx-10
+                  mt-5
+                  md:mt-10
+                  text-center text-white
+                  font-monumentExtendedBold
+                  group-hover:text-black
+                "
+              >
+                JAVASCRIPT
+              </h1>
+              <p
+                class="
+                  text-center
+                  mt-5
+                  mb-3
+                  md:mt-10
+                  text-xs
+                  md:text-lg
+                  self-end
+                  group-hover:text-black
+                "
+              >
+                INTERMEDIATE
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              border-2
+              m-2
+              md:m-3
+              rounded-sm
+              border-white
+              bg-opacity-0
+              inline-block
+              group
+              hover:bg-white
+            "
+          >
+            <div class="">
+              <h1
+                class="
+                  text-lg
+                  md:text-5xl
+                  mx-5
+                  md:mx-10
+                  mt-5
+                  md:mt-10
+                  text-center text-white
+                  font-monumentExtendedBold
+                  group-hover:text-black
+                "
+              >
+                FLUTTER
+              </h1>
+              <p
+                class="
+                  text-center
+                  mt-5
+                  mb-3
+                  md:mt-10
+                  text-xs
+                  md:text-lg
+                  self-end
+                  group-hover:text-black
+                "
+              >
+                BEGINNER
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              border-2
+              m-2
+              md:m-3
+              rounded-sm
+              border-white
+              bg-opacity-0
+              inline-block
+              group
+              hover:bg-white
+            "
+          >
+            <div class="">
+              <h1
+                class="
+                  text-lg
+                  md:text-5xl
+                  mx-5
+                  md:mx-10
+                  mt-5
+                  md:mt-10
+                  text-center text-white
+                  font-monumentExtendedBold
+                  group-hover:text-black
+                "
+              >
+                VUE JS
+              </h1>
+              <p
+                class="
+                  text-center
+                  mt-5
+                  mb-3
+                  md:mt-10
+                  text-xs
+                  md:text-lg
+                  self-end
+                  group-hover:text-black
+                "
+              >
+                BEGINNER
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              border-2
+              m-2
+              md:m-3
+              rounded-sm
+              border-white
+              bg-opacity-0
+              inline-block
+              group
+              hover:bg-white
+            "
+          >
+            <div class="">
+              <h1
+                class="
+                  text-lg
+                  md:text-5xl
+                  mx-5
+                  md:mx-10
+                  mt-5
+                  md:mt-10
+                  text-center text-white
+                  font-monumentExtendedBold
+                  group-hover:text-black
+                "
+              >
+                REACT NATIVE
+              </h1>
+              <p
+                class="
+                  text-center
+                  mt-5
+                  mb-3
+                  md:mt-10
+                  text-xs
+                  md:text-lg
+                  self-end
+                  group-hover:text-black
+                "
+              >
+                BEGINNER
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              border-2
+              m-2
+              md:m-3
+              rounded-sm
+              border-white
+              bg-opacity-0
+              inline-block
+              group
+              hover:bg-white
+            "
+          >
+            <div class="">
+              <h1
+                class="
+                  text-lg
+                  md:text-5xl
+                  mx-5
+                  md:mx-10
+                  mt-5
+                  md:mt-10
+                  text-center text-white
+                  font-monumentExtendedBold
+                  group-hover:text-black
+                "
+              >
+                CSS
+              </h1>
+              <p
+                class="
+                  text-center
+                  mt-5
+                  mb-3
+                  md:mt-10
+                  text-xs
+                  md:text-lg
+                  self-end
+                  group-hover:text-black
+                "
+              >
+                ADVANCED
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              border-2
+              m-2
+              md:m-3
+              rounded-sm
+              border-white
+              bg-opacity-0
+              inline-block
+              group
+              hover:bg-white
+            "
+          >
+            <div class="">
+              <h1
+                class="
+                  text-lg
+                  md:text-5xl
+                  mx-5
+                  md:mx-10
+                  mt-5
+                  md:mt-10
+                  text-center text-white
+                  font-monumentExtendedBold
+                  group-hover:text-black
+                "
+              >
+                TAILWIND
+              </h1>
+              <p
+                class="
+                  text-center
+                  mt-5
+                  mb-3
+                  md:mt-10
+                  text-xs
+                  md:text-lg
+                  self-end
+                  group-hover:text-black
+                "
+              >
+                ADVANCED
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              border-2
+              m-2
+              md:m-3
+              rounded-sm
+              border-white
+              bg-opacity-0
+              inline-block
+              group
+              hover:bg-white
+            "
+          >
+            <div class="">
+              <h1
+                class="
+                  text-lg
+                  md:text-5xl
+                  mx-5
+                  md:mx-10
+                  mt-5
+                  md:mt-10
+                  text-center text-white
+                  font-monumentExtendedBold
+                  group-hover:text-black
+                "
+              >
+                HTML
+              </h1>
+              <p
+                class="
+                  text-center
+                  mt-5
+                  mb-3
+                  md:mt-10
+                  text-xs
+                  md:text-lg
+                  self-end
+                  group-hover:text-black
+                "
+              >
+                ADVANCED
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of skill section -->
   </div>
 </template>
 
