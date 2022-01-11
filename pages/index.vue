@@ -161,111 +161,26 @@
           "
         >
           <!-- Card -->
-          <div class="shadow-md place-self-center w-10/12 md:full">
-            <img class="h-full" src="~/assets/images/parallax2.jpg" />
-            <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
-              <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
-                <p class="text-sm text-x-secondary-opt1">PHP | Javascript</p>
-                <h5 class="text-xl font-poppinsBold text-white">
-                  Company Profile
-                </h5>
+          <div
+            v-for="(datax, index) in portofolioData"
+            class="shadow-md place-self-center w-10/12"
+          >
+            <NuxtLink :to="{ name: 'portofolio-details', params: datax }">
+              <img class="h-full" src="~/assets/images/parallax2.jpg" />
+              <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
+                <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
+                  <p class="text-sm text-x-secondary-opt1">{{ datax.lang }}</p>
+                  <h5 class="text-xl font-poppinsBold text-white">
+                    {{ datax.title }}
+                  </h5>
+                </div>
+                <div class="place-self-end mr-5 my-auto">
+                  <h5 class="text-3xl text-x-secondary-opt1 font-steelfishBold">
+                    SEE
+                  </h5>
+                </div>
               </div>
-              <div class="place-self-end mr-5 my-auto">
-                <h5 class="text-3xl text-x-secondary-opt1 font-steelfishBold">
-                  SEE
-                </h5>
-              </div>
-            </div>
-          </div>
-          <!-- Card -->
-          <!-- Card -->
-          <div class="shadow-md place-self-center w-10/12">
-            <img class="h-full" src="~/assets/images/parallax2.jpg" />
-            <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
-              <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
-                <p class="text-sm text-x-secondary-opt1">PHP | Javascript</p>
-                <h5 class="text-xl font-poppinsBold text-white">
-                  Company Profile
-                </h5>
-              </div>
-              <div class="place-self-end mr-5 my-auto">
-                <h5 class="text-3xl text-x-secondary-opt1 font-steelfishBold">
-                  SEE
-                </h5>
-              </div>
-            </div>
-          </div>
-          <!-- Card -->
-          <!-- Card -->
-          <div class="shadow-md place-self-center w-10/12">
-            <img class="h-full" src="~/assets/images/parallax2.jpg" />
-            <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
-              <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
-                <p class="text-sm text-x-secondary-opt1">PHP | Javascript</p>
-                <h5 class="text-xl font-poppinsBold text-white">
-                  Company Profile
-                </h5>
-              </div>
-              <div class="place-self-end mr-5 my-auto">
-                <h5 class="text-3xl text-x-secondary-opt1 font-steelfishBold">
-                  SEE
-                </h5>
-              </div>
-            </div>
-          </div>
-          <!-- Card -->
-          <!-- Card -->
-          <div class="shadow-md place-self-center w-10/12">
-            <img class="h-full" src="~/assets/images/parallax2.jpg" />
-            <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
-              <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
-                <p class="text-sm text-x-secondary-opt1">PHP | Javascript</p>
-                <h5 class="text-xl font-poppinsBold text-white">
-                  Company Profile
-                </h5>
-              </div>
-              <div class="place-self-end mr-5 my-auto">
-                <h5 class="text-3xl text-x-secondary-opt1 font-steelfishBold">
-                  SEE
-                </h5>
-              </div>
-            </div>
-          </div>
-          <!-- Card -->
-          <!-- Card -->
-          <div class="shadow-md place-self-center w-10/12">
-            <img class="h-full" src="~/assets/images/parallax2.jpg" />
-            <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
-              <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
-                <p class="text-sm text-x-secondary-opt1">PHP | Javascript</p>
-                <h5 class="text-xl font-poppinsBold text-white">
-                  Company Profile
-                </h5>
-              </div>
-              <div class="place-self-end mr-5 my-auto">
-                <h5 class="text-3xl text-x-secondary-opt1 font-steelfishBold">
-                  SEE
-                </h5>
-              </div>
-            </div>
-          </div>
-          <!-- Card -->
-          <!-- Card -->
-          <div class="shadow-md place-self-center w-10/12">
-            <img class="h-full" src="~/assets/images/parallax2.jpg" />
-            <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
-              <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
-                <p class="text-sm text-x-secondary-opt1">PHP | Javascript</p>
-                <h5 class="text-xl font-poppinsBold text-white">
-                  Company Profile
-                </h5>
-              </div>
-              <div class="place-self-end mr-5 my-auto">
-                <h5 class="text-3xl text-x-secondary-opt1 font-steelfishBold">
-                  SEE
-                </h5>
-              </div>
-            </div>
+            </NuxtLink>
           </div>
           <!-- Card -->
         </div>
@@ -570,6 +485,7 @@
         </div>
         <div class="container mx-auto">
           <div
+            v-for="datax in skillsData"
             class="
               border-2
               m-2
@@ -596,7 +512,7 @@
                   group-hover:text-black
                 "
               >
-                NUXT JS
+                {{ datax.lang }}
               </h1>
               <p
                 class="
@@ -610,322 +526,7 @@
                   group-hover:text-black
                 "
               >
-                BEGINNER
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              border-2
-              m-2
-              md:m-3
-              rounded-sm
-              border-white
-              bg-opacity-0
-              inline-block
-              group
-              hover:bg-white
-            "
-          >
-            <div class="">
-              <h1
-                class="
-                  text-lg
-                  md:text-5xl
-                  mx-5
-                  md:mx-10
-                  mt-5
-                  md:mt-10
-                  text-center text-white
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                JAVASCRIPT
-              </h1>
-              <p
-                class="
-                  text-center
-                  mt-5
-                  mb-3
-                  md:mt-10
-                  text-xs
-                  md:text-lg
-                  self-end
-                  group-hover:text-black
-                "
-              >
-                INTERMEDIATE
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              border-2
-              m-2
-              md:m-3
-              rounded-sm
-              border-white
-              bg-opacity-0
-              inline-block
-              group
-              hover:bg-white
-            "
-          >
-            <div class="">
-              <h1
-                class="
-                  text-lg
-                  md:text-5xl
-                  mx-5
-                  md:mx-10
-                  mt-5
-                  md:mt-10
-                  text-center text-white
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                FLUTTER
-              </h1>
-              <p
-                class="
-                  text-center
-                  mt-5
-                  mb-3
-                  md:mt-10
-                  text-xs
-                  md:text-lg
-                  self-end
-                  group-hover:text-black
-                "
-              >
-                BEGINNER
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              border-2
-              m-2
-              md:m-3
-              rounded-sm
-              border-white
-              bg-opacity-0
-              inline-block
-              group
-              hover:bg-white
-            "
-          >
-            <div class="">
-              <h1
-                class="
-                  text-lg
-                  md:text-5xl
-                  mx-5
-                  md:mx-10
-                  mt-5
-                  md:mt-10
-                  text-center text-white
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                VUE JS
-              </h1>
-              <p
-                class="
-                  text-center
-                  mt-5
-                  mb-3
-                  md:mt-10
-                  text-xs
-                  md:text-lg
-                  self-end
-                  group-hover:text-black
-                "
-              >
-                BEGINNER
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              border-2
-              m-2
-              md:m-3
-              rounded-sm
-              border-white
-              bg-opacity-0
-              inline-block
-              group
-              hover:bg-white
-            "
-          >
-            <div class="">
-              <h1
-                class="
-                  text-lg
-                  md:text-5xl
-                  mx-5
-                  md:mx-10
-                  mt-5
-                  md:mt-10
-                  text-center text-white
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                REACT NATIVE
-              </h1>
-              <p
-                class="
-                  text-center
-                  mt-5
-                  mb-3
-                  md:mt-10
-                  text-xs
-                  md:text-lg
-                  self-end
-                  group-hover:text-black
-                "
-              >
-                BEGINNER
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              border-2
-              m-2
-              md:m-3
-              rounded-sm
-              border-white
-              bg-opacity-0
-              inline-block
-              group
-              hover:bg-white
-            "
-          >
-            <div class="">
-              <h1
-                class="
-                  text-lg
-                  md:text-5xl
-                  mx-5
-                  md:mx-10
-                  mt-5
-                  md:mt-10
-                  text-center text-white
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                CSS
-              </h1>
-              <p
-                class="
-                  text-center
-                  mt-5
-                  mb-3
-                  md:mt-10
-                  text-xs
-                  md:text-lg
-                  self-end
-                  group-hover:text-black
-                "
-              >
-                ADVANCED
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              border-2
-              m-2
-              md:m-3
-              rounded-sm
-              border-white
-              bg-opacity-0
-              inline-block
-              group
-              hover:bg-white
-            "
-          >
-            <div class="">
-              <h1
-                class="
-                  text-lg
-                  md:text-5xl
-                  mx-5
-                  md:mx-10
-                  mt-5
-                  md:mt-10
-                  text-center text-white
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                TAILWIND
-              </h1>
-              <p
-                class="
-                  text-center
-                  mt-5
-                  mb-3
-                  md:mt-10
-                  text-xs
-                  md:text-lg
-                  self-end
-                  group-hover:text-black
-                "
-              >
-                ADVANCED
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              border-2
-              m-2
-              md:m-3
-              rounded-sm
-              border-white
-              bg-opacity-0
-              inline-block
-              group
-              hover:bg-white
-            "
-          >
-            <div class="">
-              <h1
-                class="
-                  text-lg
-                  md:text-5xl
-                  mx-5
-                  md:mx-10
-                  mt-5
-                  md:mt-10
-                  text-center text-white
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                HTML
-              </h1>
-              <p
-                class="
-                  text-center
-                  mt-5
-                  mb-3
-                  md:mt-10
-                  text-xs
-                  md:text-lg
-                  self-end
-                  group-hover:text-black
-                "
-              >
-                ADVANCED
+                {{ datax.level }}
               </p>
             </div>
           </div>
@@ -943,6 +544,74 @@ export default {
   data: function () {
     return {
       upHere: false,
+      portofolioData: [
+        {
+          lang: "PHP | Codeigniter 4",
+          title: "E-Voting",
+          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        },
+        {
+          lang: "HTML 5 CANVAS | TailwindCSS | Javascript",
+          title: "Certificate Generator",
+          desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+        },
+        {
+          lang: "HTML 5 CANVAS | TailwindCSS | Javascript",
+          title: "jeng jeng",
+          desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+        },
+        {
+          lang: "HTML 5 CANVAS | TailwindCSS | Javascript",
+          title: "jeng jeng",
+          desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+        },
+      ],
+      skillsData: [
+        {
+          lang: "NUXT JS",
+          level: "BEGINNER",
+        },
+        {
+          lang: "FLUTTER",
+          level: "BEGINNER",
+        },
+        {
+          lang: "REACT NATIVE",
+          level: "BEGINNER",
+        },
+        {
+          lang: "VUE JS",
+          level: "BEGINNER",
+        },
+        {
+          lang: "CODEIGNITER",
+          level: "INTERMEDIATE",
+        },
+        {
+          lang: "LARAVEL",
+          level: "BEGINNER",
+        },
+        {
+          lang: "CSS",
+          level: "ADVANCED",
+        },
+        {
+          lang: "TAILWIND",
+          level: "ADVANCED",
+        },
+        {
+          lang: "JAVASCRIPT",
+          level: "ADVANCED",
+        },
+        {
+          lang: "PHP",
+          level: "ADVANCED",
+        },
+        {
+          lang: "HTML",
+          level: "ADVANCED",
+        },
+      ],
     };
   },
 };
