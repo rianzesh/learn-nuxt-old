@@ -11,14 +11,14 @@
               <h1
                 class="text-4xl md:text-6xl font-monumentExtendedBold uppercase"
               >
-                {{ portofolioData.title }}
+                {{ championData.title }}
               </h1>
             </div>
           </div>
           <div style="max-height: 550px" class="overflow-hidden">
             <img
               class="mx-auto w-full"
-              :src="require('~/assets/images/' + portofolioData.image)"
+              :src="require('~/assets/images/' + championData.image)"
             />
           </div>
         </div>
@@ -33,53 +33,45 @@
           "
         >
           <div class="my-14">
-            <p class="text-sm text-white">Technology/Language</p>
+            <p class="text-sm text-white">Rank Position</p>
+            <div class="inline-flex">
+              <div class="gap-x-28 p-5 pr-20 mt-2 bg-x-secondary-opt1">
+                <h5 class="text-xl text-black font-poppinsBold">
+                  {{ championData.rank }}
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="my-14">
+            <p class="text-sm text-white">Category</p>
             <h5
               class="text-xl font-poppinsBold uppercase text-x-secondary-opt1"
             >
-              {{ portofolioData.lang }}
+              {{ championData.category }}
             </h5>
           </div>
           <div class="my-14">
-            <p class="text-sm text-white">Progress Status</p>
+            <p class="text-sm text-white">Regional</p>
             <h5
               class="text-xl font-poppinsBold uppercase text-x-secondary-opt1"
             >
-              {{ portofolioData.progress }}
+              {{ championData.regional }}
             </h5>
           </div>
           <div class="my-14">
-            <p class="text-sm text-white">Website URL</p>
-            <div v-if="portofolioData.url" class="inline-flex">
-              <a :href="portofolioData.url">
-                <div
-                  class="grid grid-cols-2 gap-x-28 p-5 mt-2 bg-x-secondary-opt1"
-                >
-                  <h5 class="text-xl text-black font-poppinsBold">VISIT</h5>
-                  <img
-                    class="place-self-center"
-                    src="~/assets/icons/arrow-right.svg"
-                    alt="arrow-right"
-                  />
-                </div>
-              </a>
-            </div>
-            <div v-else class="inline-flex">
-              <a :href="portofolioData.url">
-                <div class="p-5 mt-2 bg-gray-700">
-                  <h5 class="text-xl text-black font-poppinsBold">
-                    DOESN'T EXIST <span class="ml-5">:(</span>
-                  </h5>
-                </div>
-              </a>
-            </div>
+            <p class="text-sm text-white">Date</p>
+            <h5
+              class="text-xl font-poppinsBold uppercase text-x-secondary-opt1"
+            >
+              {{ championData.date }}
+            </h5>
           </div>
         </div>
         <div class="col-span-2 mt-20 px-10">
           <h5 class="text-xl font-poppinsBold text-x-secondary-opt1">
-            ABOUT APP
+            ABOUT CHAMPION
           </h5>
-          <p class="text-xl text-white">{{ portofolioData.desc }}</p>
+          <p class="text-xl text-white">{{ championData.desc }}</p>
         </div>
       </div>
     </section>
@@ -89,14 +81,14 @@
 
 <script>
 export default {
-  name: "portofolio-details",
+  name: "champion-details",
   data() {
     return {
-      portofolioData: [],
+      championData: [],
     };
   },
   created() {
-    this.portofolioData = this.$route.params;
+    this.championData = this.$route.params;
   },
 };
 </script>

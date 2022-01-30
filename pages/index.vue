@@ -190,273 +190,7 @@
 
     <!-- champion section -->
     <section>
-      <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
-      <div
-        class="
-          md:px-10 md:grid md:grid-cols-2
-          h-screen
-          py-40
-          bg-gradient-to-l
-          from-black
-          via-black
-          relative
-          z-1
-        "
-      >
-        <show-at breakpoint="small">
-          <div
-            class="
-              mx-5
-              md:mx-0 md:p-3
-              text-center
-              place-self-center
-              mb-20
-              md:mb-28
-            "
-          >
-            <h1 class="text-white text-xl md:text-2xl font-poppinsBold">
-              Time to Flex my
-            </h1>
-            <div class="bg-x-secondary">
-              <h1 class="text-4xl md:text-6xl font-monumentExtendedBold">
-                Champion
-              </h1>
-              <p class="md:mt-3 text-xl">Berani Unjuk Gigi!</p>
-            </div>
-          </div>
-        </show-at>
-        <div
-          class="
-            bg-transparent
-            justify-self-start
-            place-self-center
-            mx-5
-            md:mx-0
-          "
-        >
-          <div class="grid grid-cols-5 md:grid-cols-3 space-x-3">
-            <div class="flex flex-col col-span-3 md:col-span-2 space-y-3">
-              <div
-                class="
-                  border-2
-                  rounded-sm
-                  border-x-secondary-opt1
-                  bg-opacity-0
-                  backdrop-filter backdrop-blur-lg
-                  group
-                  hover:bg-x-secondary-opt1
-                "
-                @mouseover="upHere = true"
-                @mouseleave="upHere = false"
-              >
-                <div class="grid grid-cols-4">
-                  <h1
-                    class="
-                      justify-self-start
-                      text-2xl
-                      md:text-5xl
-                      ml-5
-                      md:ml-10
-                      mt-5
-                      md:mt-10
-                      col-span-1
-                      md:col-span-2
-                      text-x-secondary-opt1
-                      font-monumentExtendedBold
-                      group-hover:text-black
-                    "
-                  >
-                    03
-                  </h1>
-                  <p
-                    class="
-                      justify-self-end
-                      mr-6
-                      md:mr-10
-                      my-7
-                      md:my-10
-                      col-span-3
-                      md:col-span-2
-                      text-xs
-                      md:text-base
-                      text-x-secondary-opt1
-                      group-hover:text-black
-                    "
-                  >
-                    November 21. 2019
-                  </p>
-                  <h3
-                    class="
-                      ml-5
-                      mr-5
-                      my-5
-                      md:mr-0 md:my-10 md:ml-10
-                      text-sm
-                      md:text-xl
-                      col-span-4
-                      md:col-span-3
-                      text-x-secondary-opt1
-                      font-poppinsBold
-                      group-hover:text-black
-                    "
-                  >
-                    CSIC Competition at UMN
-                  </h3>
-                  <hide-at breakpoint="small">
-                    <img
-                      class="mr-10 mt-10"
-                      v-show="upHere"
-                      src="~/assets/icons/arrow-right.svg"
-                      alt="arrow-right"
-                    />
-                  </hide-at>
-                </div>
-              </div>
-              <div
-                class="
-                  border-2
-                  rounded-sm
-                  border-x-secondary-opt1
-                  bg-opacity-0
-                  backdrop-filter backdrop-blur-lg
-                  group
-                  hover:bg-x-secondary-opt1
-                "
-              >
-                <div class="grid grid-cols-4">
-                  <h1
-                    class="
-                      justify-self-start
-                      text-2xl
-                      md:text-5xl
-                      ml-5
-                      md:ml-10
-                      mt-5
-                      md:mt-10
-                      col-span-1
-                      md:col-span-2
-                      text-x-secondary-opt1
-                      font-monumentExtendedBold
-                      group-hover:text-black
-                    "
-                  >
-                    01
-                  </h1>
-                  <p
-                    class="
-                      justify-self-end
-                      mr-6
-                      md:mr-10
-                      my-7
-                      md:my-10
-                      col-span-3
-                      md:col-span-2
-                      text-xs
-                      md:text-base
-                      text-x-secondary-opt1
-                      group-hover:text-black
-                    "
-                  >
-                    Februari 04. 2020
-                  </p>
-                  <h3
-                    class="
-                      ml-5
-                      mr-5
-                      my-5
-                      md:mr-0 md:my-10 md:ml-10
-                      text-sm
-                      md:text-xl
-                      col-span-4
-                      md:col-span-3
-                      text-x-secondary-opt1
-                      font-poppinsBold
-                      group-hover:text-black
-                    "
-                  >
-                    Telkom Poster
-                  </h3>
-                </div>
-              </div>
-            </div>
-            <div
-              class="
-                border-2
-                col-span-2
-                md:col-span-1
-                rounded-sm
-                border-x-secondary-opt1
-                backdrop-filter backdrop-blur-sm
-                bg-opacity-0
-                group
-                hover:bg-x-secondary-opt1
-              "
-            >
-              <div class="grid">
-                <h1
-                  class="
-                    justify-self-start
-                    text-2xl
-                    md:text-5xl
-                    m-5
-                    md:m-10
-                    text-x-secondary-opt1
-                    font-monumentExtendedBold
-                    group-hover:text-black
-                  "
-                >
-                  02
-                </h1>
-
-                <p
-                  class="
-                    text-x-secondary-opt1
-                    group-hover:text-black
-                    justify-self-end
-                    mr-5
-                    md:mr-10
-                    my-10
-                    md:m-8
-                    text-xs
-                    md:text-base
-                  "
-                >
-                  Juni 26. 2021
-                </p>
-                <h3
-                  class="
-                    text-x-secondary-opt1
-                    ml-5
-                    my-5
-                    md:my-10 md:ml-10
-                    font-poppinsBold
-                    bottom-0
-                    group-hover:text-black
-                    text-sm
-                    md:text-xl
-                    inset-x-0
-                    md:m-10 md:text-xl
-                  "
-                >
-                  CSIC Competition at UMN
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hide-at breakpoint="small">
-          <div class="p-3 place-self-center">
-            <h1 class="text-white text-2xl font-poppinsBold">
-              Time to Flex my
-            </h1>
-            <div class="bg-x-secondary">
-              <h1 class="text-6xl font-monumentExtendedBold">Champion</h1>
-              <p class="mt-3 text-xl">Berani Unjuk Gigi!</p>
-            </div>
-          </div>
-        </hide-at>
-      </div>
-      <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
+      <ChampionCard :championData="championData"> </ChampionCard>
     </section>
     <!-- end of champion section -->
 
@@ -539,32 +273,124 @@
 
 <script>
 import { showAt, hideAt } from "vue-breakpoints";
+import ChampionCard from "../components/ChampionCard.vue";
+
 export default {
-  components: { hideAt, showAt },
+  components: { hideAt, showAt, ChampionCard },
   data: function () {
     return {
       upHere: false,
       portofolioData: [
         {
-          lang: "PHP | Codeigniter 4",
           title: "E-Voting",
-          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          lang: "Codeigniter 4 | Bootstrap 5",
+          progress: "Completed",
+          image: "parallax3.jpg",
+          url: null,
+          desc: "This app developed by me to completed my course major assignment at my campus. E-Voting has two roles are first as administrator, they can do manage data such as votes data, users data, subadmins data, events data, reports data and many more. As user, they only do voting candidates and viewing voting updates",
         },
         {
-          lang: "HTML 5 CANVAS | TailwindCSS | Javascript",
+          lang: "HTML5 CANVAS | Javascript | TailwindCSS",
           title: "Certificate Generator",
-          desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          image: "parallax2.jpg",
+          progress: "Developing",
+          url: "https://ceritix.github.io",
+          desc: "This app developed by me to helping people like organization that wanna make event such as seminar, workshop. i can help them for make easer to generate e-certificate for participants. Sertifix have two features, manual input name and auto input name by detecting the xls/excel file. and you can download it in simultaneously.",
         },
         {
           lang: "HTML 5 CANVAS | TailwindCSS | Javascript",
           title: "jeng jeng",
+          image: "parallax4.jpg",
+          progress: "Developing",
+          url: null,
           desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
         },
         {
-          lang: "HTML 5 CANVAS | TailwindCSS | Javascript",
-          title: "jeng jeng",
-          desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          lang: "Codeigniter 4 | Bootstrap 4",
+          title: "Company Profile Project",
+          image: "parallax3.jpg",
+          progress: "Production",
+          url: null,
+          desc: "This is a my Project that was i developed for PT. Meerkats Flexipack Indonesia. i did this project for 2 months in 2019 by myself without team at all. At this App has CMS Features and Account Management.",
         },
+      ],
+      championData: [
+        [
+          {
+            title: "Dub dub dab",
+            rank: "03",
+            rankText: "Third Place",
+            category: "UI/UX",
+            image: "parallax3.jpg",
+            regional: "National",
+            date: "November 21, 2019",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+          {
+            title: "dkgnidub dab",
+            rank: "01",
+            rankText: "Winner",
+            category: "UI/UX",
+            image: "parallax3.jpg",
+            regional: "National",
+            date: "fdfdfvember 21, 2019",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+          {
+            title: "Smush smash fush",
+            rank: "02",
+            rankText: "Runner Up",
+            category: "UI/UX",
+            image: "parallax4.jpg",
+            regional: "National",
+            date: "sefihefuh 21, 2019",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+        ],
+        [
+          {
+            title: "ratatata",
+            rank: "05",
+            rankText: "Third Place",
+            category: "UI/UX",
+            image: "parallax3.jpg",
+            regional: "National",
+            date: "November 21, 2019",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+          {
+            title: "kewikew",
+            rank: "08",
+            rankText: "Winner",
+            category: "UI/UX",
+            image: "parallax3.jpg",
+            regional: "National",
+            date: "fdfdfvember 21, 2019",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+          {
+            title: "Syoshhhta",
+            rank: "07",
+            rankText: "Runner Up",
+            category: "UI/UX",
+            image: "parallax4.jpg",
+            regional: "National",
+            date: "sefihefuh 21, 2019",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+        ],
+        [
+          {
+            title: "Syoshhhta",
+            rank: "07",
+            rankText: "Runner Up",
+            category: "UI/UX",
+            image: "parallax4.jpg",
+            regional: "National",
+            date: "sefihefuh 21, 2019",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+        ],
       ],
       skillsData: [
         {
