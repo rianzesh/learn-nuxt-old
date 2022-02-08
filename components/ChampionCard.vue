@@ -47,154 +47,161 @@
           <!-- 2 baris -->
           <div class="flex flex-col col-span-3 md:col-span-2 space-y-3">
             <div v-for="(data, xy) in championData[idx]" v-if="xy !== 2">
-              <div
+              <NuxtLink
                 v-if="xy === 0"
-                class="
-                  border-2
-                  rounded-sm
-                  border-x-secondary-opt1
-                  bg-opacity-0
-                  backdrop-filter backdrop-blur-lg
-                  group
-                  hover:bg-x-secondary-opt1
-                "
-                @mouseover="upHere = true"
-                @mouseleave="upHere = false"
+                :to="{ name: 'champion-details', params: data }"
               >
-                <div class="grid grid-cols-4">
-                  <h1
-                    class="
-                      justify-self-start
-                      text-2xl
-                      md:text-5xl
-                      ml-5
-                      md:ml-10
-                      mt-5
-                      md:mt-10
-                      col-span-1
-                      md:col-span-2
-                      text-x-secondary-opt1
-                      font-monumentExtendedBold
-                      group-hover:text-black
-                    "
-                  >
-                    <!-- {{ championData[idx][0].rank }} -->
-                    {{ data.rank }}
-                  </h1>
-                  <p
-                    class="
-                      justify-self-end
-                      mr-6
-                      md:mr-10
-                      my-7
-                      md:my-10
-                      col-span-3
-                      md:col-span-2
-                      text-xs
-                      md:text-base
-                      text-x-secondary-opt1
-                      group-hover:text-black
-                    "
-                  >
-                    <!-- {{ championData[idx][0].date }} -->
-                    {{ data.date }}
-                  </p>
-                  <h3
-                    class="
-                      ml-5
-                      mr-5
-                      my-5
-                      md:mr-0 md:my-10 md:ml-10
-                      text-sm
-                      md:text-xl
-                      col-span-4
-                      md:col-span-3
-                      text-x-secondary-opt1
-                      font-poppinsBold
-                      group-hover:text-black
-                    "
-                  >
-                    <!-- {{ championData[idx][0].title }} -->
-                    {{ data.title }}
-                  </h3>
-                  <hide-at breakpoint="small">
-                    <img
-                      class="mr-10 mt-10"
-                      v-show="upHere"
-                      src="~/assets/icons/arrow-right.svg"
-                      alt="arrow-right"
-                    />
-                  </hide-at>
+                <div
+                  class="
+                    border-2
+                    rounded-sm
+                    border-x-secondary-opt1
+                    bg-opacity-0
+                    backdrop-filter backdrop-blur-lg
+                    group
+                    hover:bg-x-secondary-opt1
+                  "
+                  @mouseover="upHere = true"
+                  @mouseleave="upHere = false"
+                >
+                  <div class="grid grid-cols-4">
+                    <h1
+                      class="
+                        justify-self-start
+                        text-2xl
+                        md:text-5xl
+                        ml-5
+                        md:ml-10
+                        mt-5
+                        md:mt-10
+                        col-span-1
+                        md:col-span-2
+                        text-x-secondary-opt1
+                        font-monumentExtendedBold
+                        group-hover:text-black
+                      "
+                    >
+                      <!-- {{ championData[idx][0].rank }} -->
+                      {{ data.rank }}
+                    </h1>
+                    <p
+                      class="
+                        justify-self-end
+                        mr-6
+                        md:mr-10
+                        my-7
+                        md:my-10
+                        col-span-3
+                        md:col-span-2
+                        text-xs
+                        md:text-base
+                        text-x-secondary-opt1
+                        group-hover:text-black
+                      "
+                    >
+                      <!-- {{ championData[idx][0].date }} -->
+                      {{ data.date }}
+                    </p>
+                    <h3
+                      class="
+                        ml-5
+                        mr-5
+                        my-5
+                        md:mr-0 md:my-10 md:ml-10
+                        text-sm
+                        md:text-xl
+                        col-span-4
+                        md:col-span-3
+                        text-x-secondary-opt1
+                        font-poppinsBold
+                        group-hover:text-black
+                      "
+                    >
+                      <!-- {{ championData[idx][0].title }} -->
+                      {{ data.title }}
+                    </h3>
+                    <hide-at breakpoint="small">
+                      <img
+                        class="mr-10 mt-10"
+                        v-show="upHere"
+                        src="~/assets/icons/arrow-right.svg"
+                        alt="arrow-right"
+                      />
+                    </hide-at>
+                  </div>
                 </div>
-              </div>
-              <div
+              </NuxtLink>
+              <NuxtLink
                 v-else
-                v-else
-                class="
-                  border-2
-                  rounded-sm
-                  border-x-secondary-opt1
-                  bg-opacity-0
-                  backdrop-filter backdrop-blur-lg
-                  group
-                  hover:bg-x-secondary-opt1
-                "
+                :to="{ name: 'potofolio-details', params: data }"
               >
-                <div class="grid grid-cols-4">
-                  <h1
-                    class="
-                      justify-self-start
-                      text-2xl
-                      md:text-5xl
-                      ml-5
-                      md:ml-10
-                      mt-5
-                      md:mt-10
-                      col-span-1
-                      md:col-span-2
-                      text-x-secondary-opt1
-                      font-monumentExtendedBold
-                      group-hover:text-black
-                    "
-                  >
-                    {{ data.rank }}
-                  </h1>
-                  <p
-                    class="
-                      justify-self-end
-                      mr-6
-                      md:mr-10
-                      my-7
-                      md:my-10
-                      col-span-3
-                      md:col-span-2
-                      text-xs
-                      md:text-base
-                      text-x-secondary-opt1
-                      group-hover:text-black
-                    "
-                  >
-                    {{ data.date }}
-                  </p>
-                  <h3
-                    class="
-                      ml-5
-                      mr-5
-                      my-5
-                      md:mr-0 md:my-10 md:ml-10
-                      text-sm
-                      md:text-xl
-                      col-span-4
-                      md:col-span-3
-                      text-x-secondary-opt1
-                      font-poppinsBold
-                      group-hover:text-black
-                    "
-                  >
-                    {{ data.title }}
-                  </h3>
+                <div
+                  class="
+                    border-2
+                    rounded-sm
+                    border-x-secondary-opt1
+                    bg-opacity-0
+                    backdrop-filter backdrop-blur-lg
+                    group
+                    hover:bg-x-secondary-opt1
+                  "
+                >
+                  <div class="grid grid-cols-4">
+                    <h1
+                      class="
+                        justify-self-start
+                        text-2xl
+                        md:text-5xl
+                        ml-5
+                        md:ml-10
+                        mt-5
+                        md:mt-10
+                        col-span-1
+                        md:col-span-2
+                        text-x-secondary-opt1
+                        font-monumentExtendedBold
+                        group-hover:text-black
+                      "
+                    >
+                      {{ data.rank }}
+                    </h1>
+                    <p
+                      class="
+                        justify-self-end
+                        mr-6
+                        md:mr-10
+                        my-7
+                        md:my-10
+                        col-span-3
+                        md:col-span-2
+                        text-xs
+                        md:text-base
+                        text-x-secondary-opt1
+                        group-hover:text-black
+                      "
+                    >
+                      {{ data.date }}
+                    </p>
+                    <h3
+                      class="
+                        ml-5
+                        mr-5
+                        my-5
+                        md:mr-0 md:my-10 md:ml-10
+                        text-sm
+                        md:text-xl
+                        col-span-4
+                        md:col-span-3
+                        text-x-secondary-opt1
+                        font-poppinsBold
+                        group-hover:text-black
+                      "
+                    >
+                      {{ data.title }}
+                    </h3>
+                  </div>
                 </div>
-              </div>
+              </NuxtLink>
             </div>
           </div>
           <!-- end of 2 baris -->
@@ -214,58 +221,60 @@
               hover:bg-x-secondary-opt1
             "
           >
-            <div class="grid">
-              <h1
-                class="
-                  justify-self-start
-                  text-2xl
-                  md:text-5xl
-                  m-5
-                  md:m-10
-                  text-x-secondary-opt1
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                <!-- {{ championData[idx][2].rank }} -->
-                {{ data.rank }}
-              </h1>
+            <NuxtLink :to="{ name: 'champion-details', params: data }">
+              <div class="grid">
+                <h1
+                  class="
+                    justify-self-start
+                    text-2xl
+                    md:text-5xl
+                    m-5
+                    md:m-10
+                    text-x-secondary-opt1
+                    font-monumentExtendedBold
+                    group-hover:text-black
+                  "
+                >
+                  <!-- {{ championData[idx][2].rank }} -->
+                  {{ data.rank }}
+                </h1>
 
-              <p
-                class="
-                  text-x-secondary-opt1
-                  group-hover:text-black
-                  justify-self-end
-                  mr-5
-                  md:mr-10
-                  my-10
-                  md:m-8
-                  text-xs
-                  md:text-base
-                "
-              >
-                <!-- {{ championData[idx][2].date }} -->
-                {{ data.date }}
-              </p>
-              <h3
-                class="
-                  text-x-secondary-opt1
-                  ml-5
-                  my-5
-                  md:my-10 md:ml-10
-                  font-poppinsBold
-                  bottom-0
-                  group-hover:text-black
-                  text-sm
-                  md:text-xl
-                  inset-x-0
-                  md:m-10 md:text-xl
-                "
-              >
-                <!-- {{ championData[idx][2].title }} -->
-                {{ data.title }}
-              </h3>
-            </div>
+                <p
+                  class="
+                    text-x-secondary-opt1
+                    group-hover:text-black
+                    justify-self-end
+                    mr-5
+                    md:mr-10
+                    my-10
+                    md:m-8
+                    text-xs
+                    md:text-base
+                  "
+                >
+                  <!-- {{ championData[idx][2].date }} -->
+                  {{ data.date }}
+                </p>
+                <h3
+                  class="
+                    text-x-secondary-opt1
+                    ml-5
+                    my-5
+                    md:my-10 md:ml-10
+                    font-poppinsBold
+                    bottom-0
+                    group-hover:text-black
+                    text-sm
+                    md:text-xl
+                    inset-x-0
+                    md:m-10 md:text-xl
+                  "
+                >
+                  <!-- {{ championData[idx][2].title }} -->
+                  {{ data.title }}
+                </h3>
+              </div>
+            </NuxtLink>
           </div>
           <!-- end of 1 baris -->
         </div>
@@ -288,210 +297,217 @@
               hover:bg-x-secondary-opt1
             "
           >
-            <div class="grid">
-              <h1
-                class="
-                  justify-self-start
-                  text-2xl
-                  md:text-5xl
-                  m-5
-                  md:m-10
-                  text-x-secondary-opt1
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
-              >
-                <!-- {{ championData[idx][2].rank }} -->
-                {{ data.rank }}
-              </h1>
+            <NuxtLink :to="{ name: 'champion-details', params: data }">
+              <div class="grid">
+                <h1
+                  class="
+                    justify-self-start
+                    text-2xl
+                    md:text-5xl
+                    m-5
+                    md:m-10
+                    text-x-secondary-opt1
+                    font-monumentExtendedBold
+                    group-hover:text-black
+                  "
+                >
+                  <!-- {{ championData[idx][2].rank }} -->
+                  {{ data.rank }}
+                </h1>
 
-              <p
-                class="
-                  text-x-secondary-opt1
-                  group-hover:text-black
-                  justify-self-end
-                  mr-5
-                  md:mr-10
-                  my-10
-                  md:m-8
-                  text-xs
-                  md:text-base
-                "
-              >
-                <!-- {{ championData[idx][2].date }} -->
-                {{ data.date }}
-              </p>
-              <h3
-                class="
-                  text-x-secondary-opt1
-                  ml-5
-                  my-5
-                  md:my-10 md:ml-10
-                  font-poppinsBold
-                  bottom-0
-                  group-hover:text-black
-                  text-sm
-                  md:text-xl
-                  inset-x-0
-                  md:m-10 md:text-xl
-                "
-              >
-                <!-- {{ championData[idx][2].title }} -->
-                {{ data.title }}
-              </h3>
-            </div>
+                <p
+                  class="
+                    text-x-secondary-opt1
+                    group-hover:text-black
+                    justify-self-end
+                    mr-5
+                    md:mr-10
+                    my-10
+                    md:m-8
+                    text-xs
+                    md:text-base
+                  "
+                >
+                  <!-- {{ championData[idx][2].date }} -->
+                  {{ data.date }}
+                </p>
+                <h3
+                  class="
+                    text-x-secondary-opt1
+                    ml-5
+                    my-5
+                    md:my-10 md:ml-10
+                    font-poppinsBold
+                    bottom-0
+                    group-hover:text-black
+                    text-sm
+                    md:text-xl
+                    inset-x-0
+                    md:m-10 md:text-xl
+                  "
+                >
+                  <!-- {{ championData[idx][2].title }} -->
+                  {{ data.title }}
+                </h3>
+              </div>
+            </NuxtLink>
           </div>
           <!-- end of 1 baris -->
           <!-- 2 baris -->
           <div class="flex flex-col col-span-3 md:col-span-2 space-y-3">
             <div v-for="(data, xy) in championData[idx]" v-if="xy !== 0">
-              <div
+              <NuxtLink
                 v-if="xy === 1"
-                class="
-                  border-2
-                  rounded-sm
-                  border-x-secondary-opt1
-                  bg-opacity-0
-                  backdrop-filter backdrop-blur-lg
-                  group
-                  hover:bg-x-secondary-opt1
-                "
-                @mouseover="upHere = true"
-                @mouseleave="upHere = false"
+                :to="{ name: 'champion-details', params: data }"
               >
-                <div class="grid grid-cols-4">
-                  <h1
-                    class="
-                      justify-self-start
-                      text-2xl
-                      md:text-5xl
-                      ml-5
-                      md:ml-10
-                      mt-5
-                      md:mt-10
-                      col-span-1
-                      md:col-span-2
-                      text-x-secondary-opt1
-                      font-monumentExtendedBold
-                      group-hover:text-black
-                    "
-                  >
-                    <!-- {{ championData[idx][0].rank }} -->
-                    {{ data.rank }}
-                  </h1>
-                  <p
-                    class="
-                      justify-self-end
-                      mr-6
-                      md:mr-10
-                      my-7
-                      md:my-10
-                      col-span-3
-                      md:col-span-2
-                      text-xs
-                      md:text-base
-                      text-x-secondary-opt1
-                      group-hover:text-black
-                    "
-                  >
-                    <!-- {{ championData[idx][0].date }} -->
-                    {{ data.date }}
-                  </p>
-                  <h3
-                    class="
-                      ml-5
-                      mr-5
-                      my-5
-                      md:mr-0 md:my-10 md:ml-10
-                      text-sm
-                      md:text-xl
-                      col-span-4
-                      md:col-span-3
-                      text-x-secondary-opt1
-                      font-poppinsBold
-                      group-hover:text-black
-                    "
-                  >
-                    <!-- {{ championData[idx][0].title }} -->
-                    {{ data.title }}
-                  </h3>
-                  <hide-at breakpoint="small">
-                    <img
-                      class="mr-10 mt-10"
-                      v-show="upHere"
-                      src="~/assets/icons/arrow-right.svg"
-                      alt="arrow-right"
-                    />
-                  </hide-at>
+                <div
+                  class="
+                    border-2
+                    rounded-sm
+                    border-x-secondary-opt1
+                    bg-opacity-0
+                    backdrop-filter backdrop-blur-lg
+                    group
+                    hover:bg-x-secondary-opt1
+                  "
+                  @mouseover="upHere = true"
+                  @mouseleave="upHere = false"
+                >
+                  <div class="grid grid-cols-4">
+                    <h1
+                      class="
+                        justify-self-start
+                        text-2xl
+                        md:text-5xl
+                        ml-5
+                        md:ml-10
+                        mt-5
+                        md:mt-10
+                        col-span-1
+                        md:col-span-2
+                        text-x-secondary-opt1
+                        font-monumentExtendedBold
+                        group-hover:text-black
+                      "
+                    >
+                      <!-- {{ championData[idx][0].rank }} -->
+                      {{ data.rank }}
+                    </h1>
+                    <p
+                      class="
+                        justify-self-end
+                        mr-6
+                        md:mr-10
+                        my-7
+                        md:my-10
+                        col-span-3
+                        md:col-span-2
+                        text-xs
+                        md:text-base
+                        text-x-secondary-opt1
+                        group-hover:text-black
+                      "
+                    >
+                      <!-- {{ championData[idx][0].date }} -->
+                      {{ data.date }}
+                    </p>
+                    <h3
+                      class="
+                        ml-5
+                        mr-5
+                        my-5
+                        md:mr-0 md:my-10 md:ml-10
+                        text-sm
+                        md:text-xl
+                        col-span-4
+                        md:col-span-3
+                        text-x-secondary-opt1
+                        font-poppinsBold
+                        group-hover:text-black
+                      "
+                    >
+                      <!-- {{ championData[idx][0].title }} -->
+                      {{ data.title }}
+                    </h3>
+                    <hide-at breakpoint="small">
+                      <img
+                        class="mr-10 mt-10"
+                        v-show="upHere"
+                        src="~/assets/icons/arrow-right.svg"
+                        alt="arrow-right"
+                      />
+                    </hide-at>
+                  </div>
                 </div>
-              </div>
-              <div
-                v-else
-                class="
-                  border-2
-                  rounded-sm
-                  border-x-secondary-opt1
-                  bg-opacity-0
-                  backdrop-filter backdrop-blur-lg
-                  group
-                  hover:bg-x-secondary-opt1
-                "
-              >
-                <div class="grid grid-cols-4">
-                  <h1
-                    class="
-                      justify-self-start
-                      text-2xl
-                      md:text-5xl
-                      ml-5
-                      md:ml-10
-                      mt-5
-                      md:mt-10
-                      col-span-1
-                      md:col-span-2
-                      text-x-secondary-opt1
-                      font-monumentExtendedBold
-                      group-hover:text-black
-                    "
-                  >
-                    {{ data.rank }}
-                  </h1>
-                  <p
-                    class="
-                      justify-self-end
-                      mr-6
-                      md:mr-10
-                      my-7
-                      md:my-10
-                      col-span-3
-                      md:col-span-2
-                      text-xs
-                      md:text-base
-                      text-x-secondary-opt1
-                      group-hover:text-black
-                    "
-                  >
-                    {{ data.date }}
-                  </p>
-                  <h3
-                    class="
-                      ml-5
-                      mr-5
-                      my-5
-                      md:mr-0 md:my-10 md:ml-10
-                      text-sm
-                      md:text-xl
-                      col-span-4
-                      md:col-span-3
-                      text-x-secondary-opt1
-                      font-poppinsBold
-                      group-hover:text-black
-                    "
-                  >
-                    {{ data.title }}
-                  </h3>
+              </NuxtLink>
+              <NuxtLink v-else :to="{ name: 'champion-details', params: data }">
+                <div
+                  class="
+                    border-2
+                    rounded-sm
+                    border-x-secondary-opt1
+                    bg-opacity-0
+                    backdrop-filter backdrop-blur-lg
+                    group
+                    hover:bg-x-secondary-opt1
+                  "
+                >
+                  <div class="grid grid-cols-4">
+                    <h1
+                      class="
+                        justify-self-start
+                        text-2xl
+                        md:text-5xl
+                        ml-5
+                        md:ml-10
+                        mt-5
+                        md:mt-10
+                        col-span-1
+                        md:col-span-2
+                        text-x-secondary-opt1
+                        font-monumentExtendedBold
+                        group-hover:text-black
+                      "
+                    >
+                      {{ data.rank }}
+                    </h1>
+                    <p
+                      class="
+                        justify-self-end
+                        mr-6
+                        md:mr-10
+                        my-7
+                        md:my-10
+                        col-span-3
+                        md:col-span-2
+                        text-xs
+                        md:text-base
+                        text-x-secondary-opt1
+                        group-hover:text-black
+                      "
+                    >
+                      {{ data.date }}
+                    </p>
+                    <h3
+                      class="
+                        ml-5
+                        mr-5
+                        my-5
+                        md:mr-0 md:my-10 md:ml-10
+                        text-sm
+                        md:text-xl
+                        col-span-4
+                        md:col-span-3
+                        text-x-secondary-opt1
+                        font-poppinsBold
+                        group-hover:text-black
+                      "
+                    >
+                      {{ data.title }}
+                    </h3>
+                  </div>
                 </div>
-              </div>
+              </NuxtLink>
             </div>
           </div>
           <!-- end of 2 baris -->

@@ -268,6 +268,68 @@
       </div>
     </section>
     <!-- end of skill section -->
+
+    <!--  tech made section -->
+    <section>
+      <div class="bg-black md:py-40 grid mx-auto relative z-1">
+        <div class="mt-40 bg-white rounded-lg md:mx-20">
+          <div
+            class="
+              text-center
+              mx-5
+              md:mx-0 md:p-3
+              text-center
+              place-self-center
+              inline
+              mb-10
+              mt-44
+            "
+          >
+            <h1 class="text-gray-200 text-xl md:text-2xl font-poppinsBold">
+              Made Using
+            </h1>
+          </div>
+          <div
+            class="
+              container
+              mx-auto
+              justify-center
+              grid
+              gap-y-2
+              md:gap-y-8
+              grid-cols-1
+              md:grid-cols-3
+            "
+          >
+            <!-- Card -->
+            <div class="place-self-center w-6/12 bg-white">
+              <img
+                class="grayscale h-full"
+                src="~/assets/images/tailwind-css-logo.svg"
+              />
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="place-self-center w-6/12 bg-white">
+              <img
+                class="grayscale h-32 justify-self-center"
+                src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg"
+              />
+            </div>
+            <!-- Card -->
+            <!-- Card -->
+            <div class="place-self-center w-6/12 bg-white">
+              <img
+                class="grayscale h-36"
+                src="https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-ar21.svg"
+              />
+            </div>
+            <!-- Card -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of tech made section -->
   </div>
 </template>
 
@@ -298,8 +360,8 @@ export default {
           desc: "This app developed by me to helping people like organization that wanna make event such as seminar, workshop. i can help them for make easer to generate e-certificate for participants. Sertifix have two features, manual input name and auto input name by detecting the xls/excel file. and you can download it in simultaneously.",
         },
         {
-          lang: "HTML 5 CANVAS | TailwindCSS | Javascript",
-          title: "jeng jeng",
+          lang: "React Native",
+          title: "Calculator Mobile App",
           image: "parallax4.jpg",
           progress: "Developing",
           url: null,
@@ -313,81 +375,139 @@ export default {
           url: null,
           desc: "This is a my Project that was i developed for PT. Meerkats Flexipack Indonesia. i did this project for 2 months in 2019 by myself without team at all. At this App has CMS Features and Account Management.",
         },
+        {
+          lang: "Flutter | Firebase",
+          title: "Healthy Mobile App",
+          image: "parallax3.jpg",
+          progress: "Production",
+          url: null,
+          desc: "This is a my Project that was i developed for PT. Meerkats Flexipack Indonesia. i did this project for 2 months in 2019 by myself without team at all. At this App has CMS Features and Account Management.",
+        },
+        {
+          lang: "HTML5 | Bootstrap 4",
+          title: "Game Store Website",
+          image: "parallax3.jpg",
+          progress: "Production",
+          url: null,
+          desc: "This is a my Project that was i developed for PT. Meerkats Flexipack Indonesia. i did this project for 2 months in 2019 by myself without team at all. At this App has CMS Features and Account Management.",
+        },
+        {
+          lang: "Visual Basic .NET",
+          title: "Music Player",
+          image: "parallax3.jpg",
+          progress: "Production",
+          url: null,
+          desc: "This is a my Project that was i developed for PT. Meerkats Flexipack Indonesia. i did this project for 2 months in 2019 by myself without team at all. At this App has CMS Features and Account Management.",
+        },
+        {
+          lang: "Visual Basic .NET",
+          title: "VS Key Generator",
+          image: "parallax3.jpg",
+          progress: "Production",
+          url: null,
+          desc: "This is a my Project that was i developed for PT. Meerkats Flexipack Indonesia. i did this project for 2 months in 2019 by myself without team at all. At this App has CMS Features and Account Management.",
+        },
       ],
       championData: [
         [
           {
-            title: "Dub dub dab",
+            title: "CSIC COMPETITION",
             rank: "03",
             rankText: "Third Place",
             category: "UI/UX",
             image: "parallax3.jpg",
+            person: "Team (4 Persons)",
             regional: "National",
+            place: "Multimedia Nusantara University",
             date: "November 21, 2019",
             desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
           },
           {
-            title: "dkgnidub dab",
+            title: "IT FUN 3.0 POSTER COMPETITION",
+            rank: "02",
+            rankText: "Runner Up",
+            category: "Poster Design",
+            image: "parallax3.jpg",
+            person: "Individual",
+            regional: "National",
+            place: "Nasional University",
+            date: "November 08, 2019",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+          {
+            title: "ANTI-DRUGS POSTER COMPETITION",
+            rank: "01",
+            rankText: "Winner",
+            category: "Poster Design",
+            image: "parallax4.jpg",
+            person: "Individual",
+            regional: "National",
+            place: "Mercu Buana University",
+            date: "June 23, 2020",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+        ],
+        [
+          {
+            title: "INSPACE UI/UX COMPETITION",
             rank: "01",
             rankText: "Winner",
             category: "UI/UX",
             image: "parallax3.jpg",
+            person: "Team (3 Persons)",
             regional: "National",
-            date: "fdfdfvember 21, 2019",
+            place: "Teknologi Kalimantan Institute",
+            date: "October 23, 2021",
             desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
           },
           {
-            title: "Smush smash fush",
-            rank: "02",
-            rankText: "Runner Up",
-            category: "UI/UX",
-            image: "parallax4.jpg",
-            regional: "National",
-            date: "sefihefuh 21, 2019",
-            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
-          },
-        ],
-        [
-          {
-            title: "ratatata",
-            rank: "05",
+            title: "CODIG 3.0 UX COMPETITION",
+            rank: "03",
             rankText: "Third Place",
             category: "UI/UX",
             image: "parallax3.jpg",
+            person: "Team (3 Persons)",
             regional: "National",
-            date: "November 21, 2019",
+            place: "Mercu Buana University",
+            date: "December 19, 2020",
             desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
           },
           {
-            title: "kewikew",
-            rank: "08",
-            rankText: "Winner",
-            category: "UI/UX",
-            image: "parallax3.jpg",
-            regional: "National",
-            date: "fdfdfvember 21, 2019",
-            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
-          },
-          {
-            title: "Syoshhhta",
-            rank: "07",
-            rankText: "Runner Up",
-            category: "UI/UX",
+            title: "MUSEUM NATIONAL POSTER COMPETITION",
+            rank: "06",
+            rankText: "Sixth Place",
+            category: "Poster Competition",
             image: "parallax4.jpg",
+            person: "Individual",
             regional: "National",
-            date: "sefihefuh 21, 2019",
+            place: "Museum National",
+            date: "Juli 14, 2021",
             desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
           },
         ],
         [
           {
-            title: "Syoshhhta",
-            rank: "07",
-            rankText: "Runner Up",
-            category: "UI/UX",
+            title: "JBC INFOGRAPHIC COMPETITION",
+            rank: "TOP 10",
+            rankText: "Finalists",
+            category: "Poster Design",
             image: "parallax4.jpg",
+            person: "Individual",
             regional: "National",
-            date: "sefihefuh 21, 2019",
+            place: "Telkom University",
+            date: "August 33, 2020",
+            desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
+          },
+          {
+            title: "ADSCOMP UMB POSTER COMPETITION",
+            rank: "TOP 05",
+            rankText: "Finalists",
+            category: "Poster Design",
+            image: "parallax4.jpg",
+            person: "Individual",
+            regional: "National",
+            place: "Mercu Buana University",
+            date: "June 27, 2020",
             desc: "Llabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi reprehenderit in voluptate velit esse cillum dolore eu fugiat  orem ipsum culpa qui officia deserunt mollit anim id est laborum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut nulla pariatur. Excepteur sint occaecat cupidatat  ut aliquip ex ea commodo consequat. Duis aute irure dolor in non proident, sunt in.",
           },
         ],
@@ -436,6 +556,46 @@ export default {
         {
           lang: "HTML",
           level: "ADVANCED",
+        },
+        {
+          lang: "PHOTOSHOP",
+          level: "EXPERT",
+        },
+        {
+          lang: "FIGMA",
+          level: "ADVANCED",
+        },
+        {
+          lang: "AFFINITY DESIGNER",
+          level: "ADVANCED",
+        },
+        {
+          lang: "PREMIERE PRO",
+          level: "INTERMEDIATE",
+        },
+        {
+          lang: "AFTER EFFECT",
+          level: "INTERMEDIATE",
+        },
+        {
+          lang: "XD",
+          level: "ADVANCED",
+        },
+        {
+          lang: "LIGTHROOM",
+          level: "ADVANCED",
+        },
+        {
+          lang: "MANUAL DRAWING",
+          level: "INTERMEDIATE",
+        },
+        {
+          lang: "DESIGN",
+          level: "ADVANCED",
+        },
+        {
+          lang: "ANDROID OPREKER",
+          level: "INTERMEDIATE",
         },
       ],
     };
