@@ -131,10 +131,7 @@
                   </div>
                 </div>
               </NuxtLink>
-              <NuxtLink
-                v-else
-                :to="{ name: 'potofolio-details', params: data }"
-              >
+              <NuxtLink v-else :to="{ name: 'champion-details', params: data }">
                 <div
                   class="
                     border-2
