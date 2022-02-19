@@ -594,6 +594,10 @@ export default {
           level: "ADVANCED",
         },
         {
+          lang: "VISUAL BASIC .NET",
+          level: "BEGINNER",
+        },
+        {
           lang: "ANDROID OPREKER",
           level: "INTERMEDIATE",
         },
