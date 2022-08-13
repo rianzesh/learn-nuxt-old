@@ -3,14 +3,7 @@
     <!-- header section -->
     <section>
       <div
-        class="
-          md:px-16 md:grid md:grid-cols-3
-          gap-x-10
-          relative
-          z-1
-          bg-black
-          py-24
-        "
+        class="md:px-16 md:grid md:grid-cols-3 gap-x-10 relative z-1 bg-black py-24"
       >
         <div class="bg-yellow-0 col-span-2 px-10 md:place-self-center">
           <div class="text-left place-self-center mb-10">
@@ -30,14 +23,7 @@
           </div>
         </div>
         <div
-          class="
-            text-white
-            bg-green-0
-            text-center
-            mt-14
-            md:mt-0 md:text-left md:justify-self-start
-            place-self-center
-          "
+          class="text-white bg-green-0 text-center mt-14 md:mt-0 md:text-left md:justify-self-start place-self-center"
         >
           <div class="my-14">
             <p class="text-sm text-white">Technology/Language</p>
@@ -106,7 +92,7 @@ export default {
     };
   },
   async created() {
-    this.id = await this.$route.params.id;
+    this.id = this.$route.params.id;
 
     const { data, error } = await supabase
       .from("portofolios")
@@ -114,7 +100,6 @@ export default {
       .eq("id", this.id)
       .single();
 
-    console.log("oii: ", data);
     this.data = data;
   },
 };

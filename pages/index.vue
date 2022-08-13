@@ -145,7 +145,7 @@
 
     <!-- champion section -->
     <section v-if="this.championsData.length > 0">
-      <ChampionCard :championData="this.championData"> </ChampionCard>
+      <ChampionCard :championData="this.championsData"> </ChampionCard>
     </section>
     <!-- end of champion section -->
 
@@ -546,14 +546,15 @@ export default {
 
     champs.forEach((val, idx) => {
       tempData.push(val);
-      if (idx % 3 === 0 || idx === champs.length) {
+      if ((idx + 1) % 3 === 0 || idx + 1 === champs.length) {
         champsData[id] = tempData;
         tempData = [];
         id += 1;
+        console.log("yolo", idx);
       }
     });
-
-    this.championsData[0] = champs;
+    this.championsData = champsData;
+    console.log("errr", this.championsData);
   },
 
   async created() {
