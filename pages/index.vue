@@ -26,21 +26,17 @@
           />
         </div>
         <div
-          class="
-            text-white
-            bg-green-0
-            text-center
-            mt-14
-            md:mt-0 md:text-left md:justify-self-start
-            place-self-center
-          "
+          class="text-white bg-green-0 text-center mt-14 md:mt-0 md:text-left md:justify-self-start place-self-center"
         >
+          <div :style="style" ref="lavContainer"></div>
           <h1 class="text-96 md:text-2xl font-poppinsBold">Hello, I'm</h1>
           <h1
             class="text-3xl md:text-6xl font-poppinsBold text-x-secondary-opt1"
           >
+            <!-- {{ this.portofoliosData[0].id }} -->
             Rahmat Riansyah
           </h1>
+          <!-- <button @click="show()">Click me</button> -->
           <p class="mt-3 md:mt-5 text-96 md:text-2xl">
             A Design Enthusiast and Photography Addict, <br />
             but <b>Mobile Developer</b> Wanna be!
@@ -54,16 +50,7 @@
     <section>
       <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
       <div
-        class="
-          md:px-10 md:grid
-          grid-cols-2
-          h-screen
-          md:h-96
-          relative
-          z-1
-          mt-40
-          md:mt-0
-        "
+        class="md:px-10 md:grid grid-cols-2 h-screen md:h-96 relative z-1 mt-40 md:mt-0"
       >
         <div class="mx-5 md:mx-0 md:p-3 place-self-center">
           <h1 class="text-white text-xl md:text-2xl font-poppinsBold">
@@ -77,24 +64,10 @@
           </div>
         </div>
         <div
-          class="
-            mx-5
-            mt-10
-            md:mt-0 md:mx-0 md:mr-20
-            justify-self-center
-            md:justify-self-start
-            place-self-center
-          "
+          class="mx-5 mt-10 md:mt-0 md:mx-0 md:mr-20 justify-self-center md:justify-self-start place-self-center"
         >
           <h1
-            class="
-              text-2xl
-              bg-x-secondary
-              inline-block
-              font-poppinsBold
-              mt-10
-              md:mt-0
-            "
+            class="text-2xl bg-x-secondary inline-block font-poppinsBold mt-10 md:mt-0"
           >
             Yoo!
           </h1>
@@ -106,13 +79,7 @@
             Cartoon Character.
           </p>
           <p
-            class="
-              mt-5
-              md:mt-2
-              bg-black
-              text-x-secondary-opt1 text-xl
-              inline-block
-            "
+            class="mt-5 md:mt-2 bg-black text-x-secondary-opt1 text-xl inline-block"
           >
             Did you know?! i have a special skill is <b>LeftHanded</b>, yap i
             always do everything with my left hand and feet like use racket,
@@ -130,14 +97,7 @@
     <section>
       <div class="bg-black md:py-40 grid mx-auto relative z-1">
         <div
-          class="
-            mx-5
-            md:mx-0 md:p-3
-            text-center
-            place-self-center
-            mb-20
-            md:mb-28
-          "
+          class="mx-5 md:mx-0 md:p-3 text-center place-self-center mb-20 md:mb-28"
         >
           <h1 class="text-white text-xl md:text-2xl font-poppinsBold">
             Experience Check
@@ -150,26 +110,21 @@
           </div>
         </div>
         <div
-          class="
-            container
-            mx-auto
-            justify-center
-            grid
-            gap-y-8
-            grid-cols-1
-            md:grid-cols-3
-          "
+          class="container mx-auto justify-center grid gap-y-8 grid-cols-1 md:grid-cols-3"
         >
           <!-- Card -->
           <div
-            v-for="(datax, index) in portofolioData"
+            v-for="(datax, index) in this.portofoliosData"
             class="shadow-md place-self-center w-10/12"
           >
-            <NuxtLink :to="{ name: 'portofolio-details', params: datax }">
+            <!-- <NuxtLink :to="{ name: 'portofolio-details', params: datax }"> -->
+            <NuxtLink :to="`portofolios/${datax.id}`">
               <img class="h-full" src="~/assets/images/parallax2.jpg" />
               <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
                 <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
-                  <p class="text-sm text-x-secondary-opt1">{{ datax.lang }}</p>
+                  <p class="text-sm text-x-secondary-opt1">
+                    {{ datax.language }}
+                  </p>
                   <h5 class="text-xl font-poppinsBold text-white">
                     {{ datax.title }}
                   </h5>
@@ -189,8 +144,8 @@
     <!-- end of portofolio section -->
 
     <!-- champion section -->
-    <section>
-      <ChampionCard :championData="championData"> </ChampionCard>
+    <section v-if="this.championsData.length > 0">
+      <ChampionCard :championData="this.championData"> </ChampionCard>
     </section>
     <!-- end of champion section -->
 
@@ -198,14 +153,7 @@
     <section>
       <div class="bg-black md:py-40 grid mx-auto relative z-1">
         <div
-          class="
-            mx-5
-            md:mx-0 md:p-3
-            text-center
-            place-self-center
-            mb-20
-            md:mb-28
-          "
+          class="mx-5 md:mx-0 md:p-3 text-center place-self-center mb-20 md:mb-28"
         >
           <h1 class="text-white text-xl md:text-2xl font-poppinsBold">
             Break Down my
@@ -219,46 +167,17 @@
         </div>
         <div class="container mx-auto">
           <div
-            v-for="datax in skillsData"
-            class="
-              border-2
-              m-2
-              md:m-3
-              rounded-sm
-              border-white
-              bg-opacity-0
-              inline-block
-              group
-              hover:bg-white
-            "
+            v-for="datax in this.skillsData"
+            class="border-2 m-2 md:m-3 rounded-sm border-white bg-opacity-0 inline-block group hover:bg-white"
           >
             <div class="">
               <h1
-                class="
-                  text-lg
-                  md:text-5xl
-                  mx-5
-                  md:mx-10
-                  mt-5
-                  md:mt-10
-                  text-center text-white
-                  font-monumentExtendedBold
-                  group-hover:text-black
-                "
+                class="text-lg md:text-5xl mx-5 md:mx-10 mt-5 md:mt-10 text-center text-white font-monumentExtendedBold group-hover:text-black"
               >
-                {{ datax.lang }}
+                {{ datax.language }}
               </h1>
               <p
-                class="
-                  text-center
-                  mt-5
-                  mb-3
-                  md:mt-10
-                  text-xs
-                  md:text-lg
-                  self-end
-                  group-hover:text-black
-                "
+                class="text-center mt-5 mb-3 md:mt-10 text-xs md:text-lg self-end group-hover:text-black"
               >
                 {{ datax.level }}
               </p>
@@ -274,32 +193,14 @@
       <div class="bg-black md:py-40 grid mx-auto relative z-1">
         <div class="mt-40 bg-white rounded-lg md:mx-20">
           <div
-            class="
-              text-center
-              mx-5
-              md:mx-0 md:p-3
-              text-center
-              place-self-center
-              inline
-              mb-10
-              mt-44
-            "
+            class="text-center mx-5 md:mx-0 md:p-3 text-center place-self-center inline mb-10 mt-44"
           >
             <h1 class="text-gray-200 text-xl md:text-2xl font-poppinsBold">
               Made Using
             </h1>
           </div>
           <div
-            class="
-              container
-              mx-auto
-              justify-center
-              grid
-              gap-y-2
-              md:gap-y-8
-              grid-cols-1
-              md:grid-cols-3
-            "
+            class="container mx-auto justify-center grid gap-y-2 md:gap-y-8 grid-cols-1 md:grid-cols-3"
           >
             <!-- Card -->
             <div class="place-self-center w-6/12 bg-white">
@@ -334,14 +235,29 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import supabase from "../config/supabase";
 import { showAt, hideAt } from "vue-breakpoints";
 import ChampionCard from "../components/ChampionCard.vue";
+import axios from "axios";
+import lottie from "lottie-web";
 
 export default {
   components: { hideAt, showAt, ChampionCard },
-  data: function () {
+
+  data() {
     return {
+      style: {
+        width: this.width ? `${this.width}px` : "100%",
+        height: this.height ? `${this.height}px` : "100%",
+        overflow: "hidden",
+        margin: "0 auto",
+      },
+      skill: [],
       upHere: false,
+      championsData: [],
+      portofoliosData: [],
+      skillsData: [],
       portofolioData: [
         {
           title: "E-Voting",
@@ -512,7 +428,7 @@ export default {
           },
         ],
       ],
-      skillsData: [
+      skillData: [
         {
           lang: "NUXT JS",
           level: "BEGINNER",
@@ -604,5 +520,92 @@ export default {
       ],
     };
   },
+
+  // created() {
+  //   // GET request using axios with set headers
+  //   const headers = {
+  //     Accept: "application/json, text/plain, /",
+  //     "Content-Type": "multipart/form-data",
+  //   };
+  //   axios
+  //     .get("/api-wilayah-indonesia/api/regencies/11.json")
+  //     .then((response) => {
+  //       // this.results = response.data;
+  //       console.log("dtakuuy", response);
+  //     });
+  // },
+
+  async beforeCreate() {
+    const { data: champs, error: errChamps } = await supabase
+      .from("champions")
+      .select();
+
+    let id = 0;
+    let champsData = [];
+    let tempData = [];
+
+    champs.forEach((val, idx) => {
+      tempData.push(val);
+      if (idx % 3 === 0 || idx === champs.length) {
+        champsData[id] = tempData;
+        tempData = [];
+        id += 1;
+      }
+    });
+
+    this.championsData[0] = champs;
+  },
+
+  async created() {
+    // lottie.loadAnimation({
+    //   container: this.$refs.lavContainer, // the dom element that will contain the animation
+    //   renderer: "svg",
+    //   loop: true,
+    //   autoplay: true,
+    //   path: "../assets/lottie/thunder-bolt.json", // the path to the animation json
+    // });
+
+    const { data: portos, error: errPortos } = await supabase
+      .from("portofolios")
+      .select();
+
+    const { data: skills, error: errSkills } = await supabase
+      .from("skills")
+      .select();
+
+    this.portofoliosData = portos;
+    this.skillsData = skills;
+  },
+
+  // mounted() {
+  //   axios
+  //     .get("https://emsifa.github.io/api-wilayah-indonesia/api/provinces.json")
+  //     .then((response) => {
+  //       this.results = response.data;
+  //       console.log("dtakuuy", response.data);
+  //     });
+  // },
+
+  // beforeMount() {},
+  // methods: {
+  // },
+
+  // mounted() {
+  // const { data, error } = supabase
+  //   .from("skill")
+  //   .insert([{ name: "The Shire", level: "The Shire" }]);
+  // console.log("cek: ", error);
+
+  // console.log("test: ", this.data); // 0
+  // },
+
+  // try {
+  // const { error } = await supabase.auth.signUp({
+  //   password: password.value,
+  // });
+  //   if (error) throw error;
+  // } catch (error) {
+  //   alert(error.error_description || error.message);
+  // }
 };
 </script>
