@@ -240,7 +240,6 @@ import supabase from "../config/supabase";
 import { showAt, hideAt } from "vue-breakpoints";
 import ChampionCard from "../components/ChampionCard.vue";
 import axios from "axios";
-import lottie from "lottie-web";
 
 export default {
   components: { hideAt, showAt, ChampionCard },
