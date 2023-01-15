@@ -1,43 +1,36 @@
 <template>
-  <div class="bg-red-300">
+  <div class="bg-black">
     <!-- header section -->
     <section>
       <div
-        class="md:px-16 md:grid md:grid-cols-3 gap-x-10 bg-black relative z-1"
+        class="md:px-16 md:grid md:grid-cols-3 gap-x-10 relative z-1 bg-black py-24"
       >
-        <div class="bg-yellow-0 col-span-2 pt-32 px-10 md:place-self-center">
+        <div class="bg-yellow-0 col-span-2 px-10 md:place-self-center">
           <div class="text-left place-self-center mb-10">
             <div class="inline-flex bg-x-secondary">
               <h1
                 class="text-4xl md:text-6xl font-monumentExtendedBold uppercase"
               >
-                {{ portofolioData.title }}
+                {{ data.title }}
               </h1>
             </div>
           </div>
           <div style="max-height: 550px" class="overflow-hidden">
             <img
               class="mx-auto w-full"
-              :src="require('~/assets/images/' + portofolioData.image)"
+              :src="require('~/assets/images/' + 'parallax3.jpg')"
             />
           </div>
         </div>
         <div
-          class="
-            text-white
-            bg-green-0
-            text-center
-            mt-14
-            md:mt-0 md:text-left md:justify-self-start
-            place-self-center
-          "
+          class="text-white bg-green-0 text-center mt-14 md:mt-0 md:text-left md:justify-self-start place-self-center"
         >
           <div class="my-14">
             <p class="text-sm text-white">Technology/Language</p>
             <h5
               class="text-xl font-poppinsBold uppercase text-x-secondary-opt1"
             >
-              {{ portofolioData.lang }}
+              {{ data.language }}
             </h5>
           </div>
           <div class="my-14">
@@ -45,13 +38,13 @@
             <h5
               class="text-xl font-poppinsBold uppercase text-x-secondary-opt1"
             >
-              {{ portofolioData.progress }}
+              {{ data.progress }}
             </h5>
           </div>
           <div class="my-14">
             <p class="text-sm text-white">Website URL</p>
-            <div v-if="portofolioData.url" class="inline-flex">
-              <a :href="portofolioData.url">
+            <div v-if="data.url" class="inline-flex">
+              <a :href="data.url" target="_blank">
                 <div
                   class="grid grid-cols-2 gap-x-28 p-5 mt-2 bg-x-secondary-opt1"
                 >
@@ -65,7 +58,7 @@
               </a>
             </div>
             <div v-else class="inline-flex">
-              <a :href="portofolioData.url">
+              <a :href="data.url">
                 <div class="p-5 mt-2 bg-gray-700">
                   <h5 class="text-xl text-black font-poppinsBold">
                     DOESN'T EXIST <span class="ml-5">:(</span>
@@ -79,7 +72,7 @@
           <h5 class="text-xl font-poppinsBold text-x-secondary-opt1">
             ABOUT APP
           </h5>
-          <p class="text-xl text-white">{{ portofolioData.desc }}</p>
+          <p class="text-xl text-white">{{ data.description }}</p>
         </div>
       </div>
     </section>
@@ -88,15 +81,26 @@
 </template>
 
 <script>
+import supabase from "../../config/supabase";
+
 export default {
-  name: "portofolio-details",
+  name: "portofolios",
   data() {
     return {
-      portofolioData: [],
+      id: "",
+      data: [],
     };
   },
-  created() {
-    this.portofolioData = this.$route.params;
+  async created() {
+    this.id = this.$route.params.id;
+
+    const { data, error } = await supabase
+      .from("portofolios")
+      .select()
+      .eq("id", this.id)
+      .single();
+
+    this.data = data;
   },
 };
 </script>

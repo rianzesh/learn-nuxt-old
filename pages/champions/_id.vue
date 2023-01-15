@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-red-300">
+  <div class="bg-black">
     <!-- header section -->
     <section>
       <div
-        class="md:px-16 md:grid md:grid-cols-3 gap-x-10 bg-black relative z-1"
+        class="md:px-16 md:grid md:grid-cols-3 gap-x-10 relative z-1 bg-black py-24"
       >
-        <div class="bg-yellow-0 col-span-2 pt-32 px-10 md:place-self-center">
+        <div class="bg-yellow-0 col-span-2 px-10 md:place-self-center">
           <div class="text-left place-self-center mb-10">
             <div class="inline-flex bg-x-secondary">
               <h1
@@ -18,19 +18,12 @@
           <div style="max-height: 550px" class="overflow-hidden">
             <img
               class="mx-auto w-full"
-              :src="require('~/assets/images/' + championData.image)"
+              :src="require('~/assets/images/' + 'parallax3.jpg')"
             />
           </div>
         </div>
         <div
-          class="
-            text-white
-            bg-green-0
-            text-center
-            mt-14
-            md:mt-0 md:text-left md:justify-self-start
-            place-self-center
-          "
+          class="text-white bg-green-0 text-center mt-14 md:mt-0 md:text-left md:justify-self-start place-self-center"
         >
           <div class="my-14">
             <p class="text-sm text-white">Rank Position</p>
@@ -71,7 +64,7 @@
           <h5 class="text-xl font-poppinsBold text-x-secondary-opt1">
             ABOUT CHAMPION
           </h5>
-          <p class="text-xl text-white">{{ championData.desc }}</p>
+          <p class="text-xl text-white">{{ championData.description }}</p>
         </div>
       </div>
     </section>
@@ -80,15 +73,27 @@
 </template>
 
 <script>
+import supabase from "../../config/supabase";
+
 export default {
-  name: "champion-details",
+  name: "champions",
   data() {
     return {
+      id: "",
       championData: [],
     };
   },
-  created() {
-    this.championData = this.$route.params;
+
+  async created() {
+    this.id = this.$route.params.id;
+
+    const { data, error } = await supabase
+      .from("champions")
+      .select()
+      .eq("id", this.id)
+      .single();
+
+    this.championData = data;
   },
 };
 </script>

@@ -2,26 +2,11 @@
   <div class="">
     <div class="grid grid-cols-2 h-96 bg-black relative z-1"></div>
     <div
-      class="
-        md:px-10 md:grid md:grid-cols-2
-        py-40
-        bg-gradient-to-l
-        from-black
-        via-black
-        relative
-        z-1
-      "
+      class="md:px-10 md:grid md:grid-cols-2 py-40 bg-gradient-to-l from-black via-black relative z-1"
     >
       <show-at breakpoint="small">
         <div
-          class="
-            mx-5
-            md:mx-0 md:p-3
-            text-center
-            place-self-center
-            mb-20
-            md:mb-28
-          "
+          class="mx-5 md:mx-0 md:p-3 text-center place-self-center mb-20 md:mb-28"
         >
           <h1 class="text-white text-xl md:text-2xl font-poppinsBold">
             Time to Flex my
@@ -39,7 +24,7 @@
       >
         <!-- if -->
         <div
-          v-for="(val, idx) in championData"
+          v-for="(fasfes, idx) in championData"
           v-if="idx % 2 === 0"
           class="grid grid-cols-5 md:grid-cols-3 space-x-3 my-4"
         >
@@ -47,75 +32,27 @@
           <!-- 2 baris -->
           <div class="flex flex-col col-span-3 md:col-span-2 space-y-3">
             <div v-for="(data, xy) in championData[idx]" v-if="xy !== 2">
-              <NuxtLink
-                v-if="xy === 0"
-                :to="{ name: 'champion-details', params: data }"
-              >
+              <NuxtLink v-if="xy === 0" :to="`champions/${data.id}`">
                 <div
-                  class="
-                    border-2
-                    rounded-sm
-                    border-x-secondary-opt1
-                    bg-opacity-0
-                    backdrop-filter backdrop-blur-lg
-                    group
-                    hover:bg-x-secondary-opt1
-                  "
+                  class="border-2 rounded-sm border-x-secondary-opt1 bg-opacity-0 backdrop-filter backdrop-blur-lg group hover:bg-x-secondary-opt1"
                   @mouseover="upHere = true"
                   @mouseleave="upHere = false"
                 >
                   <div class="grid grid-cols-4">
                     <h1
-                      class="
-                        justify-self-start
-                        text-2xl
-                        md:text-5xl
-                        ml-5
-                        md:ml-10
-                        mt-5
-                        md:mt-10
-                        col-span-1
-                        md:col-span-2
-                        text-x-secondary-opt1
-                        font-monumentExtendedBold
-                        group-hover:text-black
-                      "
+                      class="justify-self-start text-2xl md:text-5xl ml-5 md:ml-10 mt-5 md:mt-10 col-span-1 md:col-span-2 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                     >
                       <!-- {{ championData[idx][0].rank }} -->
                       {{ data.rank }}
                     </h1>
                     <p
-                      class="
-                        justify-self-end
-                        mr-6
-                        md:mr-10
-                        my-7
-                        md:my-10
-                        col-span-3
-                        md:col-span-2
-                        text-xs
-                        md:text-base
-                        text-x-secondary-opt1
-                        group-hover:text-black
-                      "
+                      class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
                     >
                       <!-- {{ championData[idx][0].date }} -->
                       {{ data.date }}
                     </p>
                     <h3
-                      class="
-                        ml-5
-                        mr-5
-                        my-5
-                        md:mr-0 md:my-10 md:ml-10
-                        text-sm
-                        md:text-xl
-                        col-span-4
-                        md:col-span-3
-                        text-x-secondary-opt1
-                        font-poppinsBold
-                        group-hover:text-black
-                      "
+                      class="ml-5 mr-5 my-5 md:mr-0 md:my-10 md:ml-10 text-sm md:text-xl col-span-4 md:col-span-3 text-x-secondary-opt1 font-poppinsBold group-hover:text-black"
                     >
                       <!-- {{ championData[idx][0].title }} -->
                       {{ data.title }}
@@ -131,68 +68,23 @@
                   </div>
                 </div>
               </NuxtLink>
-              <NuxtLink v-else :to="{ name: 'champion-details', params: data }">
+              <NuxtLink v-else :to="`champions/${data.id}`">
                 <div
-                  class="
-                    border-2
-                    rounded-sm
-                    border-x-secondary-opt1
-                    bg-opacity-0
-                    backdrop-filter backdrop-blur-lg
-                    group
-                    hover:bg-x-secondary-opt1
-                  "
+                  class="border-2 rounded-sm border-x-secondary-opt1 bg-opacity-0 backdrop-filter backdrop-blur-lg group hover:bg-x-secondary-opt1"
                 >
                   <div class="grid grid-cols-4">
                     <h1
-                      class="
-                        justify-self-start
-                        text-2xl
-                        md:text-5xl
-                        ml-5
-                        md:ml-10
-                        mt-5
-                        md:mt-10
-                        col-span-1
-                        md:col-span-2
-                        text-x-secondary-opt1
-                        font-monumentExtendedBold
-                        group-hover:text-black
-                      "
+                      class="justify-self-start text-2xl md:text-5xl ml-5 md:ml-10 mt-5 md:mt-10 col-span-1 md:col-span-2 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                     >
                       {{ data.rank }}
                     </h1>
                     <p
-                      class="
-                        justify-self-end
-                        mr-6
-                        md:mr-10
-                        my-7
-                        md:my-10
-                        col-span-3
-                        md:col-span-2
-                        text-xs
-                        md:text-base
-                        text-x-secondary-opt1
-                        group-hover:text-black
-                      "
+                      class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
                     >
                       {{ data.date }}
                     </p>
                     <h3
-                      class="
-                        ml-5
-                        mr-5
-                        my-5
-                        md:mr-0 md:my-10 md:ml-10
-                        text-sm
-                        md:text-xl
-                        col-span-4
-                        md:col-span-3
-                        text-x-secondary-opt1
-                        font-poppinsBold
-                        group-hover:text-black
-                      "
+                      class="ml-5 mr-5 my-5 md:mr-0 md:my-10 md:ml-10 text-sm md:text-xl col-span-4 md:col-span-3 text-x-secondary-opt1 font-poppinsBold group-hover:text-black"
                     >
                       {{ data.title }}
                     </h3>
@@ -206,66 +98,25 @@
           <div
             v-for="(data, xy) in championData[idx]"
             v-if="xy === 2"
-            class="
-              border-2
-              col-span-2
-              md:col-span-1
-              rounded-sm
-              border-x-secondary-opt1
-              backdrop-filter backdrop-blur-sm
-              bg-opacity-0
-              group
-              hover:bg-x-secondary-opt1
-            "
+            class="border-2 col-span-2 md:col-span-1 rounded-sm border-x-secondary-opt1 backdrop-filter backdrop-blur-sm bg-opacity-0 group hover:bg-x-secondary-opt1"
           >
-            <NuxtLink :to="{ name: 'champion-details', params: data }">
+            <NuxtLink :to="`champions/${data.id}`">
               <div class="grid">
                 <h1
-                  class="
-                    justify-self-start
-                    text-2xl
-                    md:text-5xl
-                    m-5
-                    md:m-10
-                    text-x-secondary-opt1
-                    font-monumentExtendedBold
-                    group-hover:text-black
-                  "
+                  class="justify-self-start text-2xl md:text-5xl m-5 md:m-10 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                 >
                   <!-- {{ championData[idx][2].rank }} -->
                   {{ data.rank }}
                 </h1>
 
                 <p
-                  class="
-                    text-x-secondary-opt1
-                    group-hover:text-black
-                    justify-self-end
-                    mr-5
-                    md:mr-10
-                    my-10
-                    md:m-8
-                    text-xs
-                    md:text-base
-                  "
+                  class="text-x-secondary-opt1 group-hover:text-black justify-self-end mr-5 md:mr-10 my-10 md:m-8 text-xs md:text-base"
                 >
                   <!-- {{ championData[idx][2].date }} -->
                   {{ data.date }}
                 </p>
                 <h3
-                  class="
-                    text-x-secondary-opt1
-                    ml-5
-                    my-5
-                    md:my-10 md:ml-10
-                    font-poppinsBold
-                    bottom-0
-                    group-hover:text-black
-                    text-sm
-                    md:text-xl
-                    inset-x-0
-                    md:m-10 md:text-xl
-                  "
+                  class="text-x-secondary-opt1 ml-5 my-5 md:my-10 md:ml-10 font-poppinsBold bottom-0 group-hover:text-black text-sm md:text-xl inset-x-0 md:m-10 md:text-xl"
                 >
                   <!-- {{ championData[idx][2].title }} -->
                   {{ data.title }}
@@ -282,66 +133,25 @@
           <div
             v-for="(data, xy) in championData[idx]"
             v-if="xy === 0"
-            class="
-              border-2
-              col-span-2
-              md:col-span-1
-              rounded-sm
-              border-x-secondary-opt1
-              backdrop-filter backdrop-blur-sm
-              bg-opacity-0
-              group
-              hover:bg-x-secondary-opt1
-            "
+            class="border-2 col-span-2 md:col-span-1 rounded-sm border-x-secondary-opt1 backdrop-filter backdrop-blur-sm bg-opacity-0 group hover:bg-x-secondary-opt1"
           >
-            <NuxtLink :to="{ name: 'champion-details', params: data }">
+            <NuxtLink :to="`champions/${data.id}`">
               <div class="grid">
                 <h1
-                  class="
-                    justify-self-start
-                    text-2xl
-                    md:text-5xl
-                    m-5
-                    md:m-10
-                    text-x-secondary-opt1
-                    font-monumentExtendedBold
-                    group-hover:text-black
-                  "
+                  class="justify-self-start text-2xl md:text-5xl m-5 md:m-10 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                 >
                   <!-- {{ championData[idx][2].rank }} -->
                   {{ data.rank }}
                 </h1>
 
                 <p
-                  class="
-                    text-x-secondary-opt1
-                    group-hover:text-black
-                    justify-self-end
-                    mr-5
-                    md:mr-10
-                    my-10
-                    md:m-8
-                    text-xs
-                    md:text-base
-                  "
+                  class="text-x-secondary-opt1 group-hover:text-black justify-self-end mr-5 md:mr-10 my-10 md:m-8 text-xs md:text-base"
                 >
                   <!-- {{ championData[idx][2].date }} -->
                   {{ data.date }}
                 </p>
                 <h3
-                  class="
-                    text-x-secondary-opt1
-                    ml-5
-                    my-5
-                    md:my-10 md:ml-10
-                    font-poppinsBold
-                    bottom-0
-                    group-hover:text-black
-                    text-sm
-                    md:text-xl
-                    inset-x-0
-                    md:m-10 md:text-xl
-                  "
+                  class="text-x-secondary-opt1 ml-5 my-5 md:my-10 md:ml-10 font-poppinsBold bottom-0 group-hover:text-black text-sm md:text-xl inset-x-0 md:m-10 md:text-xl"
                 >
                   <!-- {{ championData[idx][2].title }} -->
                   {{ data.title }}
@@ -353,75 +163,27 @@
           <!-- 2 baris -->
           <div class="flex flex-col col-span-3 md:col-span-2 space-y-3">
             <div v-for="(data, xy) in championData[idx]" v-if="xy !== 0">
-              <NuxtLink
-                v-if="xy === 1"
-                :to="{ name: 'champion-details', params: data }"
-              >
+              <NuxtLink v-if="xy === 1" :to="`champions/${data.id}`">
                 <div
-                  class="
-                    border-2
-                    rounded-sm
-                    border-x-secondary-opt1
-                    bg-opacity-0
-                    backdrop-filter backdrop-blur-lg
-                    group
-                    hover:bg-x-secondary-opt1
-                  "
+                  class="border-2 rounded-sm border-x-secondary-opt1 bg-opacity-0 backdrop-filter backdrop-blur-lg group hover:bg-x-secondary-opt1"
                   @mouseover="upHere = true"
                   @mouseleave="upHere = false"
                 >
                   <div class="grid grid-cols-4">
                     <h1
-                      class="
-                        justify-self-start
-                        text-2xl
-                        md:text-5xl
-                        ml-5
-                        md:ml-10
-                        mt-5
-                        md:mt-10
-                        col-span-1
-                        md:col-span-2
-                        text-x-secondary-opt1
-                        font-monumentExtendedBold
-                        group-hover:text-black
-                      "
+                      class="justify-self-start text-2xl md:text-5xl ml-5 md:ml-10 mt-5 md:mt-10 col-span-1 md:col-span-2 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                     >
                       <!-- {{ championData[idx][0].rank }} -->
                       {{ data.rank }}
                     </h1>
                     <p
-                      class="
-                        justify-self-end
-                        mr-6
-                        md:mr-10
-                        my-7
-                        md:my-10
-                        col-span-3
-                        md:col-span-2
-                        text-xs
-                        md:text-base
-                        text-x-secondary-opt1
-                        group-hover:text-black
-                      "
+                      class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
                     >
                       <!-- {{ championData[idx][0].date }} -->
                       {{ data.date }}
                     </p>
                     <h3
-                      class="
-                        ml-5
-                        mr-5
-                        my-5
-                        md:mr-0 md:my-10 md:ml-10
-                        text-sm
-                        md:text-xl
-                        col-span-4
-                        md:col-span-3
-                        text-x-secondary-opt1
-                        font-poppinsBold
-                        group-hover:text-black
-                      "
+                      class="ml-5 mr-5 my-5 md:mr-0 md:my-10 md:ml-10 text-sm md:text-xl col-span-4 md:col-span-3 text-x-secondary-opt1 font-poppinsBold group-hover:text-black"
                     >
                       <!-- {{ championData[idx][0].title }} -->
                       {{ data.title }}
@@ -437,68 +199,23 @@
                   </div>
                 </div>
               </NuxtLink>
-              <NuxtLink v-else :to="{ name: 'champion-details', params: data }">
+              <NuxtLink v-else :to="`champions/${data.id}`">
                 <div
-                  class="
-                    border-2
-                    rounded-sm
-                    border-x-secondary-opt1
-                    bg-opacity-0
-                    backdrop-filter backdrop-blur-lg
-                    group
-                    hover:bg-x-secondary-opt1
-                  "
+                  class="border-2 rounded-sm border-x-secondary-opt1 bg-opacity-0 backdrop-filter backdrop-blur-lg group hover:bg-x-secondary-opt1"
                 >
                   <div class="grid grid-cols-4">
                     <h1
-                      class="
-                        justify-self-start
-                        text-2xl
-                        md:text-5xl
-                        ml-5
-                        md:ml-10
-                        mt-5
-                        md:mt-10
-                        col-span-1
-                        md:col-span-2
-                        text-x-secondary-opt1
-                        font-monumentExtendedBold
-                        group-hover:text-black
-                      "
+                      class="justify-self-start text-2xl md:text-5xl ml-5 md:ml-10 mt-5 md:mt-10 col-span-1 md:col-span-2 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                     >
                       {{ data.rank }}
                     </h1>
                     <p
-                      class="
-                        justify-self-end
-                        mr-6
-                        md:mr-10
-                        my-7
-                        md:my-10
-                        col-span-3
-                        md:col-span-2
-                        text-xs
-                        md:text-base
-                        text-x-secondary-opt1
-                        group-hover:text-black
-                      "
+                      class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
                     >
                       {{ data.date }}
                     </p>
                     <h3
-                      class="
-                        ml-5
-                        mr-5
-                        my-5
-                        md:mr-0 md:my-10 md:ml-10
-                        text-sm
-                        md:text-xl
-                        col-span-4
-                        md:col-span-3
-                        text-x-secondary-opt1
-                        font-poppinsBold
-                        group-hover:text-black
-                      "
+                      class="ml-5 mr-5 my-5 md:mr-0 md:my-10 md:ml-10 text-sm md:text-xl col-span-4 md:col-span-3 text-x-secondary-opt1 font-poppinsBold group-hover:text-black"
                     >
                       {{ data.title }}
                     </h3>
@@ -527,12 +244,16 @@
 
 <script>
 import { showAt, hideAt } from "vue-breakpoints";
+
 export default {
   components: { hideAt, showAt },
   name: "ChampionCard",
   props: ["championData"],
+
+  created() {
+    console.log("yaol", this.championData);
+  },
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

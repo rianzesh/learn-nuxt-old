@@ -9,6 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.35.2",
+    "axios": "^0.27.2",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
     "vue-breakpoints": "^1.1.0"
