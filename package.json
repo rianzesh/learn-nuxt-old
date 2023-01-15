@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
