@@ -534,9 +534,40 @@ export default {
   //     });
   // },
 
-  async beforeCreate() {
+  // async beforeCreate() {
+  //   const { data: champs, error: errChamps } = await supabase
+  //     .from("champion")
+  //     .select();
+
+  //   let id = 0;
+  //   let champsData = [];
+  //   let tempData = [];
+
+  //   console.log("txt", champs);
+  //   champs.forEach((val, idx) => {
+  //     tempData.push(val);
+  //     if ((idx + 1) % 3 === 0 || idx + 1 === champs.length) {
+  //       champsData[id] = tempData;
+  //       tempData = [];
+  //       id += 1;
+  //       console.log("yolo", idx);
+  //     }
+  //   });
+  //   this.championsData = champsData;
+  //   console.log("errr", this.hc);
+  // },
+
+  async created() {
+    // lottie.loadAnimation({
+    //   container: this.$refs.lavContainer, // the dom element that will contain the animation
+    //   renderer: "svg",
+    //   loop: true,
+    //   autoplay: true,
+    //   path: "../assets/lottie/thunder-bolt.json", // the path to the animation json
+    // });
+
     const { data: champs, error: errChamps } = await supabase
-      .from("champions")
+      .from("champion")
       .select();
 
     let id = 0;
@@ -549,30 +580,20 @@ export default {
         champsData[id] = tempData;
         tempData = [];
         id += 1;
-        console.log("yolo", idx);
+        // console.log("yolo", idx);
       }
     });
     this.championsData = champsData;
-    console.log("errr", this.championsData);
-  },
-
-  async created() {
-    // lottie.loadAnimation({
-    //   container: this.$refs.lavContainer, // the dom element that will contain the animation
-    //   renderer: "svg",
-    //   loop: true,
-    //   autoplay: true,
-    //   path: "../assets/lottie/thunder-bolt.json", // the path to the animation json
-    // });
 
     const { data: portos, error: errPortos } = await supabase
-      .from("portofolios")
+      .from("project")
       .select();
 
     const { data: skills, error: errSkills } = await supabase
-      .from("skills")
+      .from("skill")
       .select();
 
+    console.log("txt", champsData);
     this.portofoliosData = portos;
     this.skillsData = skills;
   },
