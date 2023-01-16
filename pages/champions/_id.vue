@@ -30,7 +30,9 @@
             <div class="inline-flex">
               <div class="gap-x-28 p-5 pr-20 mt-2 bg-x-secondary-opt1">
                 <h5 class="text-xl text-black font-poppinsBold">
-                  {{ championData.rank }}
+                  {{
+                    championData.rank_position + " - " + championData.rank_text
+                  }}
                 </h5>
               </div>
             </div>
@@ -56,7 +58,13 @@
             <h5
               class="text-xl font-poppinsBold uppercase text-x-secondary-opt1"
             >
-              {{ championData.date }}
+              {{
+                new Date(championData.date).toLocaleDateString("id-ID", {
+                  month: "long",
+                  day: "2-digit",
+                  year: "numeric",
+                })
+              }}
             </h5>
           </div>
         </div>
@@ -88,7 +96,7 @@ export default {
     this.id = this.$route.params.id;
 
     const { data, error } = await supabase
-      .from("champions")
+      .from("champion")
       .select()
       .eq("id", this.id)
       .single();

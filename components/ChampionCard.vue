@@ -43,7 +43,7 @@
                       class="justify-self-start text-2xl md:text-5xl ml-5 md:ml-10 mt-5 md:mt-10 col-span-1 md:col-span-2 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                     >
                       <!-- {{ championData[idx][0].rank }} -->
-                      {{ data.rank }}
+                      {{ data.rank_position }}
                     </h1>
                     <p
                       class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
@@ -76,7 +76,7 @@
                     <h1
                       class="justify-self-start text-2xl md:text-5xl ml-5 md:ml-10 mt-5 md:mt-10 col-span-1 md:col-span-2 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                     >
-                      {{ data.rank }}
+                      {{ data.rank_position }}
                     </h1>
                     <p
                       class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
@@ -106,7 +106,7 @@
                   class="justify-self-start text-2xl md:text-5xl m-5 md:m-10 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                 >
                   <!-- {{ championData[idx][2].rank }} -->
-                  {{ data.rank }}
+                  {{ data.rank_position }}
                 </h1>
 
                 <p
@@ -141,7 +141,7 @@
                   class="justify-self-start text-2xl md:text-5xl m-5 md:m-10 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                 >
                   <!-- {{ championData[idx][2].rank }} -->
-                  {{ data.rank }}
+                  {{ data.rank_position }}
                 </h1>
 
                 <p
@@ -174,7 +174,7 @@
                       class="justify-self-start text-2xl md:text-5xl ml-5 md:ml-10 mt-5 md:mt-10 col-span-1 md:col-span-2 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                     >
                       <!-- {{ championData[idx][0].rank }} -->
-                      {{ data.rank }}
+                      {{ data.rank_position }}
                     </h1>
                     <p
                       class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
@@ -207,7 +207,7 @@
                     <h1
                       class="justify-self-start text-2xl md:text-5xl ml-5 md:ml-10 mt-5 md:mt-10 col-span-1 md:col-span-2 text-x-secondary-opt1 font-monumentExtendedBold group-hover:text-black"
                     >
-                      {{ data.rank }}
+                      {{ data.rank_position }}
                     </h1>
                     <p
                       class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
