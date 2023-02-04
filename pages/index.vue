@@ -174,12 +174,12 @@
               <h1
                 class="text-lg md:text-5xl mx-5 md:mx-10 mt-5 md:mt-10 text-center text-white font-monumentExtendedBold group-hover:text-black"
               >
-                {{ datax.language }}
+                {{ datax.name.toUpperCase() }}
               </h1>
               <p
                 class="text-center mt-5 mb-3 md:mt-10 text-xs md:text-lg self-end group-hover:text-black"
               >
-                {{ datax.level }}
+                {{ datax.level.toUpperCase() }}
               </p>
             </div>
           </div>
