@@ -48,8 +48,14 @@
                     <p
                       class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
                     >
-                      <!-- {{ championData[idx][0].date }} -->
-                      {{ data.date }}
+                      {{
+                        // new Date(data.date).toLocaleDateString("id-ID", {
+                        new Date(data.date).toLocaleDateString("en-EN", {
+                          month: "long",
+                          day: "2-digit",
+                          year: "numeric",
+                        })
+                      }}
                     </p>
                     <h3
                       class="ml-5 mr-5 my-5 md:mr-0 md:my-10 md:ml-10 text-sm md:text-xl col-span-4 md:col-span-3 text-x-secondary-opt1 font-poppinsBold group-hover:text-black"
@@ -81,7 +87,14 @@
                     <p
                       class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
                     >
-                      {{ data.date }}
+                      {{
+                        // new Date(data.date).toLocaleDateString("id-ID", {
+                        new Date(data.date).toLocaleDateString("en-EN", {
+                          month: "long",
+                          day: "2-digit",
+                          year: "numeric",
+                        })
+                      }}
                     </p>
                     <h3
                       class="ml-5 mr-5 my-5 md:mr-0 md:my-10 md:ml-10 text-sm md:text-xl col-span-4 md:col-span-3 text-x-secondary-opt1 font-poppinsBold group-hover:text-black"
@@ -112,8 +125,14 @@
                 <p
                   class="text-x-secondary-opt1 group-hover:text-black justify-self-end mr-5 md:mr-10 my-10 md:m-8 text-xs md:text-base"
                 >
-                  <!-- {{ championData[idx][2].date }} -->
-                  {{ data.date }}
+                  {{
+                    // new Date(data.date).toLocaleDateString("id-ID", {
+                    new Date(data.date).toLocaleDateString("en-EN", {
+                      month: "long",
+                      day: "2-digit",
+                      year: "numeric",
+                    })
+                  }}
                 </p>
                 <h3
                   class="text-x-secondary-opt1 ml-5 my-5 md:my-10 md:ml-10 font-poppinsBold bottom-0 group-hover:text-black text-sm md:text-xl inset-x-0 md:m-10 md:text-xl"
@@ -147,8 +166,14 @@
                 <p
                   class="text-x-secondary-opt1 group-hover:text-black justify-self-end mr-5 md:mr-10 my-10 md:m-8 text-xs md:text-base"
                 >
-                  <!-- {{ championData[idx][2].date }} -->
-                  {{ data.date }}
+                  {{
+                    // new Date(data.date).toLocaleDateString("id-ID", {
+                    new Date(data.date).toLocaleDateString("en-EN", {
+                      month: "long",
+                      day: "2-digit",
+                      year: "numeric",
+                    })
+                  }}
                 </p>
                 <h3
                   class="text-x-secondary-opt1 ml-5 my-5 md:my-10 md:ml-10 font-poppinsBold bottom-0 group-hover:text-black text-sm md:text-xl inset-x-0 md:m-10 md:text-xl"
@@ -179,8 +204,14 @@
                     <p
                       class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
                     >
-                      <!-- {{ championData[idx][0].date }} -->
-                      {{ data.date }}
+                      {{
+                        // new Date(data.date).toLocaleDateString("id-ID", {
+                        new Date(data.date).toLocaleDateString("en-EN", {
+                          month: "long",
+                          day: "2-digit",
+                          year: "numeric",
+                        })
+                      }}
                     </p>
                     <h3
                       class="ml-5 mr-5 my-5 md:mr-0 md:my-10 md:ml-10 text-sm md:text-xl col-span-4 md:col-span-3 text-x-secondary-opt1 font-poppinsBold group-hover:text-black"
@@ -212,7 +243,14 @@
                     <p
                       class="justify-self-end mr-6 md:mr-10 my-7 md:my-10 col-span-3 md:col-span-2 text-xs md:text-base text-x-secondary-opt1 group-hover:text-black"
                     >
-                      {{ data.date }}
+                      {{
+                        // new Date(data.date).toLocaleDateString("id-ID", {
+                        new Date(data.date).toLocaleDateString("en-EN", {
+                          month: "long",
+                          day: "2-digit",
+                          year: "numeric",
+                        })
+                      }}
                     </p>
                     <h3
                       class="ml-5 mr-5 my-5 md:mr-0 md:my-10 md:ml-10 text-sm md:text-xl col-span-4 md:col-span-3 text-x-secondary-opt1 font-poppinsBold group-hover:text-black"
@@ -251,7 +289,7 @@ export default {
   props: ["championData"],
 
   created() {
-    console.log("yaol", this.championData);
+    // console.log("yaol", this.championData);
   },
 };
 </script>
