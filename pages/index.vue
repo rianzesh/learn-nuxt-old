@@ -191,11 +191,13 @@
     <!--  tech made section -->
     <section>
       <div class="bg-black md:py-40 grid mx-auto relative z-1">
-        <div class="mt-40 bg-white rounded-lg md:mx-20">
+        <div class="mt-40 rounded-lg md:mx-20">
           <div
             class="text-center mx-5 md:mx-0 md:p-3 text-center place-self-center inline mb-10 mt-44"
           >
-            <h1 class="text-gray-200 text-xl md:text-2xl font-poppinsBold">
+            <h1
+              class="text-x-secondary-opt1 text-md md:text-lg font-poppinsBold"
+            >
               Made Using
             </h1>
           </div>
@@ -203,27 +205,24 @@
             class="container mx-auto justify-center grid gap-y-2 md:gap-y-8 grid-cols-1 md:grid-cols-3"
           >
             <!-- Card -->
-            <div class="place-self-center w-6/12 bg-white">
+            <div class="fill-blue-500 place-self-center w-6/12">
               <img
-                class="grayscale h-full"
-                src="~/assets/images/tailwind-css-logo.svg"
+                class="fill-blue-500 h-full"
+                src="~/assets/images/tailwindcss.svg"
               />
             </div>
             <!-- Card -->
             <!-- Card -->
-            <div class="place-self-center w-6/12 bg-white">
+            <div class="place-self-center w-6/12">
               <img
                 class="grayscale h-32 justify-self-center"
-                src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg"
+                src="~/assets/images/vuejs.svg"
               />
             </div>
             <!-- Card -->
             <!-- Card -->
-            <div class="place-self-center w-6/12 bg-white">
-              <img
-                class="grayscale h-36"
-                src="https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-ar21.svg"
-              />
+            <div class="place-self-center w-6/12">
+              <img class="grayscale h-36" src="~/assets/images/nuxtjs.svg" />
             </div>
             <!-- Card -->
           </div>

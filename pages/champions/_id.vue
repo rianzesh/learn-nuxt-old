@@ -5,16 +5,16 @@
       <div
         class="md:px-16 md:grid md:grid-cols-3 gap-x-10 relative z-1 bg-black py-24"
       >
-        <div class="bg-yellow-0 col-span-2 px-10 md:place-self-center">
-          <div class="text-left place-self-center mb-10">
-            <div class="inline-flex bg-x-secondary">
-              <h1
-                class="text-4xl md:text-6xl font-monumentExtendedBold uppercase"
-              >
-                {{ championData.title }}
-              </h1>
-            </div>
+        <div class="md:px-10 col-span-3 text-left mb-6">
+          <div class="inline-flex bg-x-secondary">
+            <h1
+              class="text-4xl md:text-6xl font-monumentExtendedBold uppercase"
+            >
+              {{ championData.title }}
+            </h1>
           </div>
+        </div>
+        <div class="bg-yellow-0 col-span-2 px-10 md:place-self-center">
           <div style="max-height: 550px" class="overflow-hidden">
             <img
               class="mx-auto w-full"
