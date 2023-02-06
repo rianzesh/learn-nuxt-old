@@ -119,7 +119,15 @@
           >
             <!-- <NuxtLink :to="{ name: 'portofolio-details', params: datax }"> -->
             <NuxtLink :to="`portofolios/${datax.id}`">
-              <img class="h-full" src="~/assets/images/parallax2.jpg" />
+              <!-- <img class="h-full" src="~/assets/images/parallax2.jpg" /> -->
+              <img
+                class="h-full"
+                :src="`${
+                  datax.image_url
+                    ? datax.image_url
+                    : 'https://mbfltfpzlzhszrgxfmni.supabase.co/storage/v1/object/public/assets/projects/empty.png'
+                }`"
+              />
               <div class="py-4 grid grid-cols-3 bg-gray-800 text-white">
                 <div class="col-span-2 place-self-start ml-5 my-auto space-y-1">
                   <p class="text-sm text-x-secondary-opt1">
