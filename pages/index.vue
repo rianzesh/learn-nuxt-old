@@ -223,14 +223,14 @@
             <!-- Card -->
             <div class="place-self-center w-6/12">
               <img
-                class="grayscale h-32 justify-self-center"
+                class="grayscale h-full justify-self-center"
                 src="~/assets/images/vuejs.svg"
               />
             </div>
             <!-- Card -->
             <!-- Card -->
             <div class="place-self-center w-6/12">
-              <img class="grayscale h-36" src="~/assets/images/nuxtjs.svg" />
+              <img class="grayscale h-full" src="~/assets/images/nuxtjs.svg" />
             </div>
             <!-- Card -->
           </div>
